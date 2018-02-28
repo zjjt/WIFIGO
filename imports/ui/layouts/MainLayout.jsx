@@ -1,5 +1,5 @@
 import React,{PropTypes,Component} from 'react';
-import {FlowRouter} from 'meteor/kadira:flow-router';
+import {FlowRouter} from 'meteor/ostrio:flow-router-extra';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
@@ -26,23 +26,7 @@ const muiTheme= getMuiTheme({
 	
 });
 
-class Bienvenue extends Component{
-	//static muiName='FlatButton';
-	constructor(){
-		super();
-		
-	}
-	render(){
-		return(
-			<FlatButton {...this.props} 
-				label="Bienvenue"  
-				style={{
-					color:'white',
-					marginTop:'5%'
-				}} />
-		);
-	}
-}
+
 
 
 
@@ -57,7 +41,6 @@ export default class MainLayout extends Component{
 		};
 	}
 	componentWillMount() {
-		
 
 	}
 
@@ -75,12 +58,6 @@ export default class MainLayout extends Component{
 		
 	}
 	componentDidMount(){
-		
-		if(Meteor.user()){
-			this.setState({
-				loggedIn:false
-			});
-		}
 	}
 	render(){
 		const {content}=this.props;

@@ -1,5 +1,5 @@
 import React,{PropTypes,Component} from 'react';
-import {FlowRouter} from 'meteor/kadira:flow-router';
+import {FlowRouter} from 'meteor/ostrio:flow-router-extra';
 import {Toolbar,ToolbarSeparator,ToolbarTitle,ToolbarGroup} from 'material-ui/Toolbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
@@ -114,6 +114,29 @@ if(areIntlLocalesSupported(['fr'])){
                     />
                 );
             }
+            if(e=="modprof"){
+                return(
+                    <Field
+                        name="profession" 
+                        component={TextField}
+                        hintText="Entrez votre profession"
+                        floatingLabelText="Profession"
+                        fullWidth={true}
+                        key={i}
+                        onChange={(e)=>{
+                            if(e.target.value!==""){
+                                dispatch(modiformCanSubmit())
+                            }else{
+                                dispatch(modiformCantSubmit())
+                            }
+                        }}
+                        floatingLabelStyle={styles.floatingLabelStyle}
+                        hintStyle={styles.hintStyle}
+                        floatingLabelFixed={true}
+                        validate={[ required ]}
+                    />
+                );
+            }
             if(e=="modsexe"){
                 return(
                     <Field
@@ -161,10 +184,13 @@ if(areIntlLocalesSupported(['fr'])){
                         }}
                         value={this.props.matrimoniale?this.props.matrimoniale:''}
                     >
-                        <MenuItem value="C" primaryText="CELIBATAIRE"/>
-                        <MenuItem value="M" primaryText="MARIE(E)"/>
-                        <MenuItem value="P" primaryText="PACSE(E)"/>
-                        <MenuItem value="V" primaryText="VEUF / VEUVE"/>
+                        <MenuItem value="CE" primaryText="CELIBATAIRE"/>
+                        <MenuItem value="CC" primaryText="CONCUBINAGE"/>
+                        <MenuItem value="MA" primaryText="MARIE(E)"/>
+                        <MenuItem value="DI" primaryText="DIVORCE(E)"/>
+                        <MenuItem value="SE" primaryText="SEPARE(E)"/>
+                        <MenuItem value="PA" primaryText="PACSE(E)"/>
+                        <MenuItem value="VE" primaryText="VEUF / VEUVE"/>
                     </Field>
                 );
             }
@@ -200,7 +226,7 @@ if(areIntlLocalesSupported(['fr'])){
                             floatingLabelStyle={styles.floatingLabelStyle}
                             hintStyle={styles.hintStyle}
                             floatingLabelFixed={true}
-                            key={8}
+                            key={"IB"}
                             onChange={(e)=>{
                                 if(e.target.value!==""){
                                     dispatch(modiformCanSubmit())
@@ -266,7 +292,7 @@ if(areIntlLocalesSupported(['fr'])){
         });
         console.dir(leFormulaire);
         return(
-            <form onSubmit={handleSubmit} autocomplete="off">
+            <form onSubmit={handleSubmit} autoComplete="off">
             {leFormulaire}
             </form>
         );

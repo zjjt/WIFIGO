@@ -1,9 +1,15 @@
+require('es5-shim');
+require('es5-shim/es5-sham');
+require('console-polyfill');
+import 'core-js/es6/map';
+import 'core-js/es6/set';
+import 'raf/polyfill';
 import './routes';
-import {meteor} from 'meteor/meteor'
+import {meteor} from 'meteor/meteor';
+
 //import '../both';
 
 Meteor.startup(()=>{
-    
     WebFontConfig={
         google:{families:['Roboto:400,300,500:latin']}
     };

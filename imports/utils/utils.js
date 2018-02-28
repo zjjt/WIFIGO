@@ -49,8 +49,50 @@ let convertInDateObjFromFrenchDate=(e)=>{
     let day=e.substring(0,2);
     let mois=e.substring(3,5);
     let year=e.substring(6);
-    return new Date(year,mois,day);
+    console.log(new Date(year,--mois,day));
+    return new Date(year,--mois,day);
 };
+export const DAYS_IN_MONTH = [null, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+function daysInMonth(year, month) {
+    // isValidDate checked that year and month are integers already.
+
+    // February of leap years. Assumes that the Gregorian calendar extends
+    // infinitely in the future and in the past.
+    if (month === 2 && (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0))) {
+        return 29
+    }
+
+    // Everything else.
+    return DAYS_IN_MONTH[month]
+}
+
+export function isValidDate(year, month, day) {
+    day=parseInt(day,10);
+    month=parseInt(month,10);
+    year=parseInt(year,10);
+    console.log(day+"-"+month+"-"+year);
+    return (
+        // Check that year, month and day are integers. Deals with NaN.
+        year === Math.round(year) && month === Math.round(month) && day === Math.round(day) &&
+        // Any year is valid. Check that month and day are valid.
+        month >= 1 && month <= 12 && day >= 1 && day <= daysInMonth(year, month)
+    )
+}
+
+let convertInTextFromFrenchDate=(e)=>{
+    let day=e.substring(0,2);
+    let mois=e.substring(3,5);
+    let year=e.substring(6);
+//alert(isValidDate(year,mois,day))    
+    if(isValidDate(year,mois,day))
+    return year+mois+day;
+    else{
+        alert("Veuillez fournir une date valide");
+        location.reload()
+    }
+}
+
 let formatNumberInMoney=(x)=>{
     let parts=x.toString().split(".");
     parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,",");
@@ -105,4 +147,5 @@ const groupSumBySymbole=(arr,propAgrouper,propAsum)=>{
     arr.forEach(processRecord);
     return ([...newArray.values()]);
 }
-export {validateEmail,arrAreSame,transformInFrenchDate,formatNumberInMoney,groupByLibel,groupSumBySymbole,convertInDateObjFromFrenchDate,englishToFrenchDate};
+
+export {validateEmail,arrAreSame,transformInFrenchDate,formatNumberInMoney,groupByLibel,groupSumBySymbole,convertInDateObjFromFrenchDate,convertInTextFromFrenchDate,englishToFrenchDate};

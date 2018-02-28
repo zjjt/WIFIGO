@@ -1,5 +1,6 @@
 import React,{PropTypes,Component} from 'react';
 import AppBar from 'material-ui/AppBar';
+import {Meteor} from 'meteor/meteor';
 import GetIdentiform from '../components/GetIdentiform.jsx';
 import {macAdresses} from '../../api/collections';
 import { createContainer } from 'meteor/react-meteor-data';
@@ -24,7 +25,7 @@ let max350style=_.extend({},normalStyle,{
     }
 });
 
-class FormulaireHotPage extends Component{
+class LogDownload extends Component{
     constructor(){
         super();
         this.state={
@@ -51,6 +52,27 @@ class FormulaireHotPage extends Component{
        
         this._updateDimensions();
         window.addEventListener('resize',this._updateDimensions.bind(this))
+
+        Meteor.call("downloadLog",(err,res)=>{
+           // console.dir(res+" "+err);
+            if(res){
+                console.dir(res);
+               alert("Un fichier excel contenant le log de connexion au "+moment(res.date).format("DD/MM/YYYY")+" sera téléchargé automatiquement...");
+               const blob=new Blob([res.blob],{
+                   type:'application/octet-stream'
+               });
+               const a=window.document.createElement('a');
+               a.href=window.URL.createObjectURL(blob,{
+                   type:'data:attachment/xlsx'
+               });
+               a.download="LOGWIFIGO_"+moment(new Date()).format("DD/MM/YYYY")+".xlsx";
+               document.body.appendChild(a);
+               a.click();
+               document.body.removeChild(a);
+            }else{
+                alert("téléchargement échoué.");
+            }
+        })
         
     }
     componentWillUnmount(){
@@ -58,17 +80,9 @@ class FormulaireHotPage extends Component{
     }
     render(){
         return(
-           <div className="centeredContent">
-                <div className="loginDiv fadeInUp animated">
-                    <AppBar
-                        title={`Agence ${Meteor.settings.public.AGENCE} de Nsia Vie Assurances`}
-                        style={{backgroundColor: '#212f68'}}
-                        iconClassNameLeft="none"
-                        titleStyle={this.state.styles.appContainerStyle.titleStyle}
-                    />
-                   {this.props.routerP.has_trial=="no"?(<div className="loginformCont"><p style={{textAlign:'center'}}>Cher invité, vous ne bénéficiez plus de la connexion gratuite pour cette journée.<br/>Merci d'être NSIA.</p></div>):(<GetIdentiform routerParam={this.props.routerP}/>)} 
-                </div>
-           </div>
+            <div style={{textAlign:"center",color:"white"}}>
+                <marquee>Downloading log...</marquee>
+            </div>
         )
     }
 }
@@ -87,4 +101,4 @@ export default createContainer((props)=>{
         macfound:macAdresses.find({mac_adr:adr}).count() 
     };*/
     return{}
-},FormulaireHotPage);
+},LogDownload);

@@ -1,0 +1,1651 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.10.10
+3 info using node@v7.2.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData react
+20 silly mapToRegistry name react
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'react',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   escapedName: 'react',
+23 silly mapToRegistry   name: 'react',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/react
+25 silly fetchNamedPackageData react-dom
+26 silly mapToRegistry name react-dom
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry data Result {
+29 silly mapToRegistry   raw: 'react-dom',
+29 silly mapToRegistry   scope: null,
+29 silly mapToRegistry   escapedName: 'react-dom',
+29 silly mapToRegistry   name: 'react-dom',
+29 silly mapToRegistry   rawSpec: '',
+29 silly mapToRegistry   spec: 'latest',
+29 silly mapToRegistry   type: 'tag' }
+30 silly mapToRegistry uri https://registry.npmjs.org/react-dom
+31 silly fetchNamedPackageData react-tap-event-plugin
+32 silly mapToRegistry name react-tap-event-plugin
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'react-tap-event-plugin',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   escapedName: 'react-tap-event-plugin',
+35 silly mapToRegistry   name: 'react-tap-event-plugin',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri https://registry.npmjs.org/react-tap-event-plugin
+37 silly fetchNamedPackageData fibers
+38 silly mapToRegistry name fibers
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npmjs.org/
+41 silly mapToRegistry data Result {
+41 silly mapToRegistry   raw: 'fibers',
+41 silly mapToRegistry   scope: null,
+41 silly mapToRegistry   escapedName: 'fibers',
+41 silly mapToRegistry   name: 'fibers',
+41 silly mapToRegistry   rawSpec: '',
+41 silly mapToRegistry   spec: 'latest',
+41 silly mapToRegistry   type: 'tag' }
+42 silly mapToRegistry uri https://registry.npmjs.org/fibers
+43 verbose request uri https://registry.npmjs.org/react-dom
+44 verbose request no auth needed
+45 info attempt registry request try #1 at 14:16:15
+46 verbose request id 54b6bbb4f49b30fc
+47 verbose etag "5a94beee-249a7"
+48 verbose lastModified Tue, 27 Feb 2018 2:14:06 GMT
+49 http request GET https://registry.npmjs.org/react-dom
+50 verbose request uri https://registry.npmjs.org/react-tap-event-plugin
+51 verbose request no auth needed
+52 info attempt registry request try #1 at 14:16:15
+53 verbose etag "5a41d60f-6fe2"
+54 verbose lastModified Tue, 26 Dec 2017 4:54:39 GMT
+55 http request GET https://registry.npmjs.org/react-tap-event-plugin
+56 verbose request uri https://registry.npmjs.org/react
+57 verbose request no auth needed
+58 info attempt registry request try #1 at 14:16:15
+59 verbose etag "5a94beef-35971"
+60 verbose lastModified Tue, 27 Feb 2018 2:14:07 GMT
+61 http request GET https://registry.npmjs.org/react
+62 verbose request uri https://registry.npmjs.org/fibers
+63 verbose request no auth needed
+64 info attempt registry request try #1 at 14:16:15
+65 verbose etag "5a78e9ab-104c0"
+66 verbose lastModified Mon, 5 Feb 2018 23:32:59 GMT
+67 http request GET https://registry.npmjs.org/fibers
+68 http 304 https://registry.npmjs.org/react-tap-event-plugin
+69 verbose headers { date: 'Tue, 27 Feb 2018 14:16:17 GMT',
+69 verbose headers   via: '1.1 varnish',
+69 verbose headers   'cache-control': 'max-age=300',
+69 verbose headers   etag: '"5a41d60f-6fe2"',
+69 verbose headers   age: '5611',
+69 verbose headers   connection: 'keep-alive',
+69 verbose headers   'x-served-by': 'cache-lhr6324-LHR',
+69 verbose headers   'x-cache': 'HIT',
+69 verbose headers   'x-cache-hits': '2',
+69 verbose headers   'x-timer': 'S1519740978.750499,VS0,VE0',
+69 verbose headers   vary: 'Accept-Encoding, Accept' }
+70 silly get cb [ 304,
+70 silly get   { date: 'Tue, 27 Feb 2018 14:16:17 GMT',
+70 silly get     via: '1.1 varnish',
+70 silly get     'cache-control': 'max-age=300',
+70 silly get     etag: '"5a41d60f-6fe2"',
+70 silly get     age: '5611',
+70 silly get     connection: 'keep-alive',
+70 silly get     'x-served-by': 'cache-lhr6324-LHR',
+70 silly get     'x-cache': 'HIT',
+70 silly get     'x-cache-hits': '2',
+70 silly get     'x-timer': 'S1519740978.750499,VS0,VE0',
+70 silly get     vary: 'Accept-Encoding, Accept' } ]
+71 verbose etag https://registry.npmjs.org/react-tap-event-plugin from cache
+72 verbose get saving react-tap-event-plugin to C:\Users\Administrateur\AppData\Roaming\npm-cache\registry.npmjs.org\react-tap-event-plugin\.cache.json
+73 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+74 http 304 https://registry.npmjs.org/react
+75 verbose headers { date: 'Tue, 27 Feb 2018 14:16:17 GMT',
+75 verbose headers   via: '1.1 varnish',
+75 verbose headers   'cache-control': 'max-age=300',
+75 verbose headers   etag: '"5a94beef-35971"',
+75 verbose headers   age: '18',
+75 verbose headers   connection: 'keep-alive',
+75 verbose headers   'x-served-by': 'cache-lhr6333-LHR',
+75 verbose headers   'x-cache': 'HIT',
+75 verbose headers   'x-cache-hits': '1',
+75 verbose headers   'x-timer': 'S1519740978.762643,VS0,VE1',
+75 verbose headers   vary: 'Accept-Encoding, Accept' }
+76 silly get cb [ 304,
+76 silly get   { date: 'Tue, 27 Feb 2018 14:16:17 GMT',
+76 silly get     via: '1.1 varnish',
+76 silly get     'cache-control': 'max-age=300',
+76 silly get     etag: '"5a94beef-35971"',
+76 silly get     age: '18',
+76 silly get     connection: 'keep-alive',
+76 silly get     'x-served-by': 'cache-lhr6333-LHR',
+76 silly get     'x-cache': 'HIT',
+76 silly get     'x-cache-hits': '1',
+76 silly get     'x-timer': 'S1519740978.762643,VS0,VE1',
+76 silly get     vary: 'Accept-Encoding, Accept' } ]
+77 verbose etag https://registry.npmjs.org/react from cache
+78 verbose get saving react to C:\Users\Administrateur\AppData\Roaming\npm-cache\registry.npmjs.org\react\.cache.json
+79 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+80 http 304 https://registry.npmjs.org/fibers
+81 verbose headers { date: 'Tue, 27 Feb 2018 14:16:17 GMT',
+81 verbose headers   via: '1.1 varnish',
+81 verbose headers   'cache-control': 'max-age=300',
+81 verbose headers   etag: '"5a78e9ab-104c0"',
+81 verbose headers   age: '5780',
+81 verbose headers   connection: 'keep-alive',
+81 verbose headers   'x-served-by': 'cache-lhr6327-LHR',
+81 verbose headers   'x-cache': 'HIT',
+81 verbose headers   'x-cache-hits': '1',
+81 verbose headers   'x-timer': 'S1519740978.766273,VS0,VE1',
+81 verbose headers   vary: 'Accept-Encoding, Accept' }
+82 silly get cb [ 304,
+82 silly get   { date: 'Tue, 27 Feb 2018 14:16:17 GMT',
+82 silly get     via: '1.1 varnish',
+82 silly get     'cache-control': 'max-age=300',
+82 silly get     etag: '"5a78e9ab-104c0"',
+82 silly get     age: '5780',
+82 silly get     connection: 'keep-alive',
+82 silly get     'x-served-by': 'cache-lhr6327-LHR',
+82 silly get     'x-cache': 'HIT',
+82 silly get     'x-cache-hits': '1',
+82 silly get     'x-timer': 'S1519740978.766273,VS0,VE1',
+82 silly get     vary: 'Accept-Encoding, Accept' } ]
+83 verbose etag https://registry.npmjs.org/fibers from cache
+84 verbose get saving fibers to C:\Users\Administrateur\AppData\Roaming\npm-cache\registry.npmjs.org\fibers\.cache.json
+85 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+86 http 304 https://registry.npmjs.org/react-dom
+87 verbose headers { date: 'Tue, 27 Feb 2018 14:16:17 GMT',
+87 verbose headers   via: '1.1 varnish',
+87 verbose headers   'cache-control': 'max-age=300',
+87 verbose headers   etag: '"5a94beee-249a7"',
+87 verbose headers   age: '40',
+87 verbose headers   connection: 'keep-alive',
+87 verbose headers   'x-served-by': 'cache-lhr6325-LHR',
+87 verbose headers   'x-cache': 'HIT',
+87 verbose headers   'x-cache-hits': '1',
+87 verbose headers   'x-timer': 'S1519740978.768087,VS0,VE1',
+87 verbose headers   vary: 'Accept-Encoding, Accept' }
+88 silly get cb [ 304,
+88 silly get   { date: 'Tue, 27 Feb 2018 14:16:17 GMT',
+88 silly get     via: '1.1 varnish',
+88 silly get     'cache-control': 'max-age=300',
+88 silly get     etag: '"5a94beee-249a7"',
+88 silly get     age: '40',
+88 silly get     connection: 'keep-alive',
+88 silly get     'x-served-by': 'cache-lhr6325-LHR',
+88 silly get     'x-cache': 'HIT',
+88 silly get     'x-cache-hits': '1',
+88 silly get     'x-timer': 'S1519740978.768087,VS0,VE1',
+88 silly get     vary: 'Accept-Encoding, Accept' } ]
+89 verbose etag https://registry.npmjs.org/react-dom from cache
+90 verbose get saving react-dom to C:\Users\Administrateur\AppData\Roaming\npm-cache\registry.npmjs.org\react-dom\.cache.json
+91 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache correctMkdir already in flight; waiting
+92 silly resolveWithNewModule fibers@2.0.0 checking installable status
+93 silly cache add args [ 'fibers@^2.0.0', null ]
+94 verbose cache add spec fibers@^2.0.0
+95 silly cache add parsed spec Result {
+95 silly cache add   raw: 'fibers@^2.0.0',
+95 silly cache add   scope: null,
+95 silly cache add   escapedName: 'fibers',
+95 silly cache add   name: 'fibers',
+95 silly cache add   rawSpec: '^2.0.0',
+95 silly cache add   spec: '>=2.0.0 <3.0.0',
+95 silly cache add   type: 'range' }
+96 silly addNamed fibers@>=2.0.0 <3.0.0
+97 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for fibers
+98 silly addNameRange { name: 'fibers', range: '>=2.0.0 <3.0.0', hasData: false }
+99 silly mapToRegistry name fibers
+100 silly mapToRegistry using default registry
+101 silly mapToRegistry registry https://registry.npmjs.org/
+102 silly mapToRegistry data Result {
+102 silly mapToRegistry   raw: 'fibers',
+102 silly mapToRegistry   scope: null,
+102 silly mapToRegistry   escapedName: 'fibers',
+102 silly mapToRegistry   name: 'fibers',
+102 silly mapToRegistry   rawSpec: '',
+102 silly mapToRegistry   spec: 'latest',
+102 silly mapToRegistry   type: 'tag' }
+103 silly mapToRegistry uri https://registry.npmjs.org/fibers
+104 verbose addNameRange registry:https://registry.npmjs.org/fibers not in flight; fetching
+105 silly resolveWithNewModule react-dom@16.2.0 checking installable status
+106 silly cache add args [ 'react-dom@^16.1.1', null ]
+107 verbose cache add spec react-dom@^16.1.1
+108 silly cache add parsed spec Result {
+108 silly cache add   raw: 'react-dom@^16.1.1',
+108 silly cache add   scope: null,
+108 silly cache add   escapedName: 'react-dom',
+108 silly cache add   name: 'react-dom',
+108 silly cache add   rawSpec: '^16.1.1',
+108 silly cache add   spec: '>=16.1.1 <17.0.0',
+108 silly cache add   type: 'range' }
+109 silly addNamed react-dom@>=16.1.1 <17.0.0
+110 verbose addNamed ">=16.1.1 <17.0.0" is a valid semver range for react-dom
+111 silly addNameRange { name: 'react-dom', range: '>=16.1.1 <17.0.0', hasData: false }
+112 silly mapToRegistry name react-dom
+113 silly mapToRegistry using default registry
+114 silly mapToRegistry registry https://registry.npmjs.org/
+115 silly mapToRegistry data Result {
+115 silly mapToRegistry   raw: 'react-dom',
+115 silly mapToRegistry   scope: null,
+115 silly mapToRegistry   escapedName: 'react-dom',
+115 silly mapToRegistry   name: 'react-dom',
+115 silly mapToRegistry   rawSpec: '',
+115 silly mapToRegistry   spec: 'latest',
+115 silly mapToRegistry   type: 'tag' }
+116 silly mapToRegistry uri https://registry.npmjs.org/react-dom
+117 verbose addNameRange registry:https://registry.npmjs.org/react-dom not in flight; fetching
+118 silly resolveWithNewModule react@16.2.0 checking installable status
+119 silly cache add args [ 'react@^16.1.1', null ]
+120 verbose cache add spec react@^16.1.1
+121 silly cache add parsed spec Result {
+121 silly cache add   raw: 'react@^16.1.1',
+121 silly cache add   scope: null,
+121 silly cache add   escapedName: 'react',
+121 silly cache add   name: 'react',
+121 silly cache add   rawSpec: '^16.1.1',
+121 silly cache add   spec: '>=16.1.1 <17.0.0',
+121 silly cache add   type: 'range' }
+122 silly addNamed react@>=16.1.1 <17.0.0
+123 verbose addNamed ">=16.1.1 <17.0.0" is a valid semver range for react
+124 silly addNameRange { name: 'react', range: '>=16.1.1 <17.0.0', hasData: false }
+125 silly mapToRegistry name react
+126 silly mapToRegistry using default registry
+127 silly mapToRegistry registry https://registry.npmjs.org/
+128 silly mapToRegistry data Result {
+128 silly mapToRegistry   raw: 'react',
+128 silly mapToRegistry   scope: null,
+128 silly mapToRegistry   escapedName: 'react',
+128 silly mapToRegistry   name: 'react',
+128 silly mapToRegistry   rawSpec: '',
+128 silly mapToRegistry   spec: 'latest',
+128 silly mapToRegistry   type: 'tag' }
+129 silly mapToRegistry uri https://registry.npmjs.org/react
+130 verbose addNameRange registry:https://registry.npmjs.org/react not in flight; fetching
+131 silly resolveWithNewModule react-tap-event-plugin@3.0.2 checking installable status
+132 silly cache add args [ 'react-tap-event-plugin@^3.0.2', null ]
+133 verbose cache add spec react-tap-event-plugin@^3.0.2
+134 silly cache add parsed spec Result {
+134 silly cache add   raw: 'react-tap-event-plugin@^3.0.2',
+134 silly cache add   scope: null,
+134 silly cache add   escapedName: 'react-tap-event-plugin',
+134 silly cache add   name: 'react-tap-event-plugin',
+134 silly cache add   rawSpec: '^3.0.2',
+134 silly cache add   spec: '>=3.0.2 <4.0.0',
+134 silly cache add   type: 'range' }
+135 silly addNamed react-tap-event-plugin@>=3.0.2 <4.0.0
+136 verbose addNamed ">=3.0.2 <4.0.0" is a valid semver range for react-tap-event-plugin
+137 silly addNameRange { name: 'react-tap-event-plugin',
+137 silly addNameRange   range: '>=3.0.2 <4.0.0',
+137 silly addNameRange   hasData: false }
+138 silly mapToRegistry name react-tap-event-plugin
+139 silly mapToRegistry using default registry
+140 silly mapToRegistry registry https://registry.npmjs.org/
+141 silly mapToRegistry data Result {
+141 silly mapToRegistry   raw: 'react-tap-event-plugin',
+141 silly mapToRegistry   scope: null,
+141 silly mapToRegistry   escapedName: 'react-tap-event-plugin',
+141 silly mapToRegistry   name: 'react-tap-event-plugin',
+141 silly mapToRegistry   rawSpec: '',
+141 silly mapToRegistry   spec: 'latest',
+141 silly mapToRegistry   type: 'tag' }
+142 silly mapToRegistry uri https://registry.npmjs.org/react-tap-event-plugin
+143 verbose addNameRange registry:https://registry.npmjs.org/react-tap-event-plugin not in flight; fetching
+144 verbose get https://registry.npmjs.org/fibers not expired, no request
+145 silly addNameRange number 2 { name: 'fibers', range: '>=2.0.0 <3.0.0', hasData: true }
+146 silly addNameRange versions [ 'fibers',
+146 silly addNameRange   [ '0.1.0',
+146 silly addNameRange     '0.1.1',
+146 silly addNameRange     '0.1.2',
+146 silly addNameRange     '0.1.3',
+146 silly addNameRange     '0.1.4',
+146 silly addNameRange     '0.1.6',
+146 silly addNameRange     '0.1.7',
+146 silly addNameRange     '0.1.8',
+146 silly addNameRange     '0.2.0',
+146 silly addNameRange     '0.2.1',
+146 silly addNameRange     '0.2.2',
+146 silly addNameRange     '0.2.3',
+146 silly addNameRange     '0.2.4',
+146 silly addNameRange     '0.2.5',
+146 silly addNameRange     '0.2.6',
+146 silly addNameRange     '0.5.0',
+146 silly addNameRange     '0.6.0',
+146 silly addNameRange     '0.5.1',
+146 silly addNameRange     '0.6.1',
+146 silly addNameRange     '0.6.2',
+146 silly addNameRange     '0.6.3',
+146 silly addNameRange     '0.6.4',
+146 silly addNameRange     '0.6.5',
+146 silly addNameRange     '0.6.6',
+146 silly addNameRange     '0.6.7',
+146 silly addNameRange     '0.6.8',
+146 silly addNameRange     '0.6.9',
+146 silly addNameRange     '1.0.0',
+146 silly addNameRange     '1.0.1',
+146 silly addNameRange     '1.0.2',
+146 silly addNameRange     '1.0.4',
+146 silly addNameRange     '1.0.5',
+146 silly addNameRange     '1.0.6-b',
+146 silly addNameRange     '1.0.7',
+146 silly addNameRange     '1.0.8',
+146 silly addNameRange     '1.0.9',
+146 silly addNameRange     '1.0.10',
+146 silly addNameRange     '1.0.11',
+146 silly addNameRange     '1.0.12',
+146 silly addNameRange     '1.0.13',
+146 silly addNameRange     '1.0.14',
+146 silly addNameRange     '1.0.15',
+146 silly addNameRange     '2.0.0' ] ]
+147 silly addNamed fibers@2.0.0
+148 verbose addNamed "2.0.0" is a plain semver version for fibers
+149 verbose get https://registry.npmjs.org/react-dom not expired, no request
+150 silly addNameRange number 2 { name: 'react-dom', range: '>=16.1.1 <17.0.0', hasData: true }
+151 silly addNameRange versions [ 'react-dom',
+151 silly addNameRange   [ '0.1.0',
+151 silly addNameRange     '0.14.0-beta1',
+151 silly addNameRange     '0.14.0-beta2',
+151 silly addNameRange     '0.14.0-beta3',
+151 silly addNameRange     '0.14.0-rc1',
+151 silly addNameRange     '0.14.0',
+151 silly addNameRange     '0.14.1',
+151 silly addNameRange     '0.14.2',
+151 silly addNameRange     '0.14.3',
+151 silly addNameRange     '0.14.4',
+151 silly addNameRange     '0.14.5',
+151 silly addNameRange     '0.14.6',
+151 silly addNameRange     '0.15.0-alpha.1',
+151 silly addNameRange     '0.14.7',
+151 silly addNameRange     '15.0.0-rc.1',
+151 silly addNameRange     '15.0.0-rc.2',
+151 silly addNameRange     '0.14.8',
+151 silly addNameRange     '15.0.0',
+151 silly addNameRange     '15.0.1',
+151 silly addNameRange     '15.0.2-alpha.1',
+151 silly addNameRange     '15.0.2-alpha.2',
+151 silly addNameRange     '15.0.2-alpha.3',
+151 silly addNameRange     '15.0.2-alpha.4',
+151 silly addNameRange     '15.0.2',
+151 silly addNameRange     '15.0.3-alpha.1',
+151 silly addNameRange     '15.0.3-alpha.2',
+151 silly addNameRange     '15.1.0-alpha.1',
+151 silly addNameRange     '15.1.0',
+151 silly addNameRange     '15.2.0-rc.1',
+151 silly addNameRange     '15.2.0-rc.2',
+151 silly addNameRange     '15.2.0',
+151 silly addNameRange     '15.2.1',
+151 silly addNameRange     '15.3.0-rc.1',
+151 silly addNameRange     '15.3.0-rc.2',
+151 silly addNameRange     '15.3.0-rc.3',
+151 silly addNameRange     '15.3.0',
+151 silly addNameRange     '15.3.1-rc.1',
+151 silly addNameRange     '15.3.1-rc.2',
+151 silly addNameRange     '15.3.1',
+151 silly addNameRange     '15.3.2-rc.1',
+151 silly addNameRange     '15.3.2',
+151 silly addNameRange     '15.4.0-rc.1',
+151 silly addNameRange     '15.4.0-rc.2',
+151 silly addNameRange     '15.4.0-rc.3',
+151 silly addNameRange     '15.4.0-rc.4',
+151 silly addNameRange     '15.4.0',
+151 silly addNameRange     '15.4.1',
+151 silly addNameRange     '15.4.2',
+151 silly addNameRange     '16.0.0-alpha',
+151 silly addNameRange     '16.0.0-alpha.0',
+151 silly addNameRange     '16.0.0-alpha.2',
+151 silly addNameRange     '16.0.0-alpha.3',
+151 silly addNameRange     '16.0.0-alpha.4',
+151 silly addNameRange     '16.0.0-alpha.5',
+151 silly addNameRange     '16.0.0-alpha.6',
+151 silly addNameRange     '15.5.0-rc.1',
+151 silly addNameRange     '16.0.0-alpha.7',
+151 silly addNameRange     '15.5.0-rc.2',
+151 silly addNameRange     '16.0.0-alpha.8',
+151 silly addNameRange     '15.5.0',
+151 silly addNameRange     '15.5.1',
+151 silly addNameRange     '15.5.2',
+151 silly addNameRange     '15.5.3',
+151 silly addNameRange     '15.5.4',
+151 silly addNameRange     '16.0.0-alpha.9',
+151 silly addNameRange     '0.14.9',
+151 silly addNameRange     '16.0.0-alpha.10',
+151 silly addNameRange     '16.0.0-alpha.11',
+151 silly addNameRange     '16.0.0-alpha.12',
+151 silly addNameRange     '15.6.0-rc.1',
+151 silly addNameRange     '16.0.0-alpha.13',
+151 silly addNameRange     '15.6.0',
+151 silly addNameRange     '15.6.1',
+151 silly addNameRange     '16.0.0-beta.1',
+151 silly addNameRange     '16.0.0-beta.2',
+151 silly addNameRange     '16.0.0-beta.3',
+151 silly addNameRange     '16.0.0-beta.4',
+151 silly addNameRange     '16.0.0-beta.5',
+151 silly addNameRange     '16.0.0-rc.1',
+151 silly addNameRange     '16.0.0-rc.2',
+151 silly addNameRange     '16.0.0-rc.3',
+151 silly addNameRange     '15.6.2',
+151 silly addNameRange     '16.0.0',
+151 silly addNameRange     '16.1.0-beta',
+151 silly addNameRange     '16.1.0-beta.1',
+151 silly addNameRange     '16.1.0-rc',
+151 silly addNameRange     '16.1.0',
+151 silly addNameRange     '16.1.1',
+151 silly addNameRange     '16.2.0',
+151 silly addNameRange     '16.3.0-alpha.0',
+151 silly addNameRange     '16.3.0-alpha.1',
+151 silly addNameRange     '16.4.0-alpha.7926752',
+151 silly addNameRange     '16.4.0-alpha.3174632',
+151 silly addNameRange     '16.4.0-alpha.0911da3' ] ]
+152 silly addNamed react-dom@16.2.0
+153 verbose addNamed "16.2.0" is a plain semver version for react-dom
+154 verbose get https://registry.npmjs.org/react not expired, no request
+155 silly addNameRange number 2 { name: 'react', range: '>=16.1.1 <17.0.0', hasData: true }
+156 silly addNameRange versions [ 'react',
+156 silly addNameRange   [ '0.0.1',
+156 silly addNameRange     '0.0.2',
+156 silly addNameRange     '0.0.3',
+156 silly addNameRange     '0.1.2',
+156 silly addNameRange     '0.2.0',
+156 silly addNameRange     '0.2.1',
+156 silly addNameRange     '0.2.2',
+156 silly addNameRange     '0.2.3',
+156 silly addNameRange     '0.2.4',
+156 silly addNameRange     '0.2.5',
+156 silly addNameRange     '0.2.6',
+156 silly addNameRange     '0.3.0',
+156 silly addNameRange     '0.3.4',
+156 silly addNameRange     '0.3.5',
+156 silly addNameRange     '0.5.0',
+156 silly addNameRange     '0.5.1',
+156 silly addNameRange     '0.5.2',
+156 silly addNameRange     '0.6.0',
+156 silly addNameRange     '0.6.1',
+156 silly addNameRange     '0.6.2',
+156 silly addNameRange     '0.6.3',
+156 silly addNameRange     '0.7.0',
+156 silly addNameRange     '0.7.1',
+156 silly addNameRange     '0.8.0',
+156 silly addNameRange     '0.9.0-rc1',
+156 silly addNameRange     '0.9.0',
+156 silly addNameRange     '0.10.0-rc1',
+156 silly addNameRange     '0.10.0',
+156 silly addNameRange     '0.11.0-rc1',
+156 silly addNameRange     '0.11.0',
+156 silly addNameRange     '0.11.1',
+156 silly addNameRange     '0.11.2',
+156 silly addNameRange     '0.12.0-rc1',
+156 silly addNameRange     '0.12.0',
+156 silly addNameRange     '0.12.1',
+156 silly addNameRange     '0.12.2',
+156 silly addNameRange     '0.13.0-alpha.1',
+156 silly addNameRange     '0.13.0-alpha.2',
+156 silly addNameRange     '0.13.0-beta.1',
+156 silly addNameRange     '0.13.0-beta.2',
+156 silly addNameRange     '0.13.0-rc1',
+156 silly addNameRange     '0.13.0-rc2',
+156 silly addNameRange     '0.13.0',
+156 silly addNameRange     '0.13.1',
+156 silly addNameRange     '0.13.2',
+156 silly addNameRange     '0.13.3',
+156 silly addNameRange     '0.14.0-alpha1',
+156 silly addNameRange     '0.14.0-alpha2',
+156 silly addNameRange     '0.14.0-alpha3',
+156 silly addNameRange     '0.14.0-beta1',
+156 silly addNameRange     '0.14.0-beta2',
+156 silly addNameRange     '0.14.0-beta3',
+156 silly addNameRange     '0.14.0-rc1',
+156 silly addNameRange     '0.14.0',
+156 silly addNameRange     '0.14.1',
+156 silly addNameRange     '0.14.2',
+156 silly addNameRange     '0.14.3',
+156 silly addNameRange     '0.14.4',
+156 silly addNameRange     '0.14.5',
+156 silly addNameRange     '0.14.6',
+156 silly addNameRange     '0.15.0-alpha.1',
+156 silly addNameRange     '0.14.7',
+156 silly addNameRange     '15.0.0-rc.1',
+156 silly addNameRange     '15.0.0-rc.2',
+156 silly addNameRange     '0.14.8',
+156 silly addNameRange     '15.0.0',
+156 silly addNameRange     '15.0.1',
+156 silly addNameRange     '15.0.2-alpha.1',
+156 silly addNameRange     '15.0.2-alpha.2',
+156 silly addNameRange     '15.0.2-alpha.3',
+156 silly addNameRange     '15.0.2-alpha.4',
+156 silly addNameRange     '15.0.2',
+156 silly addNameRange     '15.0.3-alpha.1',
+156 silly addNameRange     '15.0.3-alpha.2',
+156 silly addNameRange     '15.1.0-alpha.1',
+156 silly addNameRange     '15.1.0',
+156 silly addNameRange     '15.2.0-rc.1',
+156 silly addNameRange     '15.2.0-rc.2',
+156 silly addNameRange     '15.2.0',
+156 silly addNameRange     '15.2.1',
+156 silly addNameRange     '15.3.0-rc.1',
+156 silly addNameRange     '15.3.0-rc.2',
+156 silly addNameRange     '15.3.0-rc.3',
+156 silly addNameRange     '15.3.0',
+156 silly addNameRange     '15.3.1-rc.1',
+156 silly addNameRange     '15.3.1-rc.2',
+156 silly addNameRange     '15.3.1',
+156 silly addNameRange     '15.3.2-rc.1',
+156 silly addNameRange     '15.3.2',
+156 silly addNameRange     '15.4.0-rc.1',
+156 silly addNameRange     '15.4.0-rc.2',
+156 silly addNameRange     '15.4.0-rc.3',
+156 silly addNameRange     '15.4.0-rc.4',
+156 silly addNameRange     '15.4.0',
+156 silly addNameRange     '15.4.1',
+156 silly addNameRange     '15.4.2',
+156 silly addNameRange     '16.0.0-alpha',
+156 silly addNameRange     '16.0.0-alpha.0',
+156 silly addNameRange     '16.0.0-alpha.2',
+156 silly addNameRange     '16.0.0-alpha.3',
+156 silly addNameRange     ... 42 more items ] ]
+157 silly addNamed react@16.2.0
+158 verbose addNamed "16.2.0" is a plain semver version for react
+159 verbose get https://registry.npmjs.org/react-tap-event-plugin not expired, no request
+160 silly addNameRange number 2 { name: 'react-tap-event-plugin',
+160 silly addNameRange   range: '>=3.0.2 <4.0.0',
+160 silly addNameRange   hasData: true }
+161 silly addNameRange versions [ 'react-tap-event-plugin',
+161 silly addNameRange   [ '0.1.0',
+161 silly addNameRange     '0.1.1',
+161 silly addNameRange     '0.1.2',
+161 silly addNameRange     '0.1.3',
+161 silly addNameRange     '0.1.4',
+161 silly addNameRange     '0.1.5',
+161 silly addNameRange     '0.1.6',
+161 silly addNameRange     '0.1.7',
+161 silly addNameRange     '0.1.8',
+161 silly addNameRange     '0.2.0',
+161 silly addNameRange     '0.2.1',
+161 silly addNameRange     '0.2.2',
+161 silly addNameRange     '1.0.0',
+161 silly addNameRange     '2.0.0',
+161 silly addNameRange     '2.0.1',
+161 silly addNameRange     '3.0.0',
+161 silly addNameRange     '3.0.1',
+161 silly addNameRange     '3.0.2' ] ]
+162 silly addNamed react-tap-event-plugin@3.0.2
+163 verbose addNamed "3.0.2" is a plain semver version for react-tap-event-plugin
+164 silly cache afterAdd fibers@2.0.0
+165 verbose afterAdd C:\Users\Administrateur\AppData\Roaming\npm-cache\fibers\2.0.0\package\package.json not in flight; writing
+166 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+167 silly cache afterAdd react-dom@16.2.0
+168 verbose afterAdd C:\Users\Administrateur\AppData\Roaming\npm-cache\react-dom\16.2.0\package\package.json not in flight; writing
+169 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+170 silly cache afterAdd react@16.2.0
+171 verbose afterAdd C:\Users\Administrateur\AppData\Roaming\npm-cache\react\16.2.0\package\package.json not in flight; writing
+172 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+173 silly cache afterAdd react-tap-event-plugin@3.0.2
+174 verbose afterAdd C:\Users\Administrateur\AppData\Roaming\npm-cache\react-tap-event-plugin\3.0.2\package\package.json not in flight; writing
+175 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+176 verbose afterAdd C:\Users\Administrateur\AppData\Roaming\npm-cache\react-dom\16.2.0\package\package.json written
+177 verbose afterAdd C:\Users\Administrateur\AppData\Roaming\npm-cache\react\16.2.0\package\package.json written
+178 verbose afterAdd C:\Users\Administrateur\AppData\Roaming\npm-cache\fibers\2.0.0\package\package.json written
+179 verbose afterAdd C:\Users\Administrateur\AppData\Roaming\npm-cache\react-tap-event-plugin\3.0.2\package\package.json written
+180 silly loadAllDepsIntoIdealTree Finishing
+181 silly loadIdealTree Finishing
+182 silly currentTree WIFIGO@
+182 silly currentTree +-- @types/geojson@1.0.6
+182 silly currentTree +-- @types/node@8.0.58
+182 silly currentTree +-- amator@1.0.1
+182 silly currentTree +-- archiver-utils@1.3.0
+182 silly currentTree +-- archiver@1.3.0
+182 silly currentTree +-- arguments-extended@0.0.3
+182 silly currentTree +-- array-extended@0.0.11
+182 silly currentTree +-- asap@2.0.6
+182 silly currentTree +-- async@2.6.0
+182 silly currentTree +-- babel-runtime@6.26.0
+182 silly currentTree +-- balanced-match@1.0.0
+182 silly currentTree +-- bezier-easing@2.0.3
+182 silly currentTree +-- big-number@0.3.1
+182 silly currentTree +-- binary@0.3.0
+182 silly currentTree +-- bl@1.2.1
+182 silly currentTree +-- bluebird@3.5.1
+182 silly currentTree +-- bowser@1.8.1
+182 silly currentTree +-- brace-expansion@1.1.11
+182 silly currentTree +-- buffer-crc32@0.2.13
+182 silly currentTree +-- buffers@0.1.1
+182 silly currentTree +-- chain-function@1.0.0
+182 silly currentTree +-- chainsaw@0.1.0
+182 silly currentTree +-- change-emitter@0.1.6
+182 silly currentTree +-- classnames@2.2.5
+182 silly currentTree +-- cls-bluebird@2.1.0
+182 silly currentTree +-- compress-commons@1.2.2
+182 silly currentTree +-- concat-map@0.0.1
+182 silly currentTree +-- console-polyfill@0.3.0
+182 silly currentTree +-- core-js@2.5.3
+182 silly currentTree +-- core-util-is@1.0.2
+182 silly currentTree +-- crc@3.5.0
+182 silly currentTree +-- crc32-stream@2.0.0
+182 silly currentTree +-- create-react-class@15.6.2
+182 silly currentTree +-- cron-parser@2.4.4
+182 silly currentTree +-- css-in-js-utils@2.0.0
+182 silly currentTree +-- date-extended@0.0.6
+182 silly currentTree +-- debug@3.1.0
+182 silly currentTree +-- declare.js@0.0.8
+182 silly currentTree +-- deep-diff@0.3.4
+182 silly currentTree +-- deep-equal@1.0.1
+182 silly currentTree +-- define-properties@1.1.2
+182 silly currentTree +-- depd@1.1.1
+182 silly currentTree +-- dom-helpers@3.2.1
+182 silly currentTree +-- domready@1.0.8
+182 silly currentTree +-- dottie@2.0.0
+182 silly currentTree +-- encoding@0.1.12
+182 silly currentTree +-- end-of-stream@1.4.1
+182 silly currentTree +-- es5-shim@4.5.10
+182 silly currentTree +-- es6-error@4.0.2
+182 silly currentTree +-- es6-promise@3.0.2
+182 silly currentTree +-- exceljs@0.8.2
+182 silly currentTree | `-- moment@2.19.3
+182 silly currentTree +-- extended@0.0.6
+182 silly currentTree +-- extender@0.0.10
+182 silly currentTree +-- fast-csv@2.4.1
+182 silly currentTree +-- fbjs@0.8.16
+182 silly currentTree | `-- core-js@1.2.7
+182 silly currentTree +-- foreach@2.0.5
+182 silly currentTree +-- fs.realpath@1.0.0
+182 silly currentTree +-- fstream@0.1.31
+182 silly currentTree | `-- graceful-fs@3.0.11
+182 silly currentTree +-- generic-pool@3.2.0
+182 silly currentTree +-- glob@7.1.2
+182 silly currentTree +-- graceful-fs@4.1.11
+182 silly currentTree +-- hoist-non-react-statics@2.3.1
+182 silly currentTree +-- hyphenate-style-name@1.0.2
+182 silly currentTree +-- iconv-lite@0.4.19
+182 silly currentTree +-- immediate@3.0.6
+182 silly currentTree +-- inflection@1.12.0
+182 silly currentTree +-- inflight@1.0.6
+182 silly currentTree +-- inherits@2.0.3
+182 silly currentTree +-- inline-style-prefixer@3.0.8
+182 silly currentTree +-- intl-locales-supported@1.0.0
+182 silly currentTree +-- invariant@2.2.2
+182 silly currentTree +-- is-bluebird@1.0.2
+182 silly currentTree +-- is-extended@0.0.10
+182 silly currentTree +-- is-nan@1.2.1
+182 silly currentTree +-- is-promise@2.1.0
+182 silly currentTree +-- is-stream@1.1.0
+182 silly currentTree +-- isarray@1.0.0
+182 silly currentTree +-- isomorphic-fetch@2.2.1
+182 silly currentTree +-- js-tokens@3.0.2
+182 silly currentTree +-- json-stringify-safe@5.0.1
+182 silly currentTree +-- jszip@3.1.3
+182 silly currentTree | +-- core-js@2.3.0
+182 silly currentTree | +-- readable-stream@2.0.6
+182 silly currentTree | `-- string_decoder@0.10.31
+182 silly currentTree +-- keycode@2.1.9
+182 silly currentTree +-- lazystream@1.0.0
+182 silly currentTree +-- lie@3.1.1
+182 silly currentTree +-- lodash-es@4.17.4
+182 silly currentTree +-- lodash._getnative@3.9.1
+182 silly currentTree +-- lodash.isarguments@3.1.0
+182 silly currentTree +-- lodash.isarray@3.0.4
+182 silly currentTree +-- lodash.keys@3.1.2
+182 silly currentTree +-- lodash.merge@4.6.0
+182 silly currentTree +-- lodash.pick@4.4.0
+182 silly currentTree +-- lodash.throttle@4.1.1
+182 silly currentTree +-- lodash@4.17.4
+182 silly currentTree +-- long-timeout@0.1.1
+182 silly currentTree +-- loose-envify@1.3.1
+182 silly currentTree +-- match-stream@0.0.2
+182 silly currentTree | +-- isarray@0.0.1
+182 silly currentTree | +-- readable-stream@1.0.34
+182 silly currentTree | `-- string_decoder@0.10.31
+182 silly currentTree +-- material-ui@0.19.4
+182 silly currentTree +-- meteor-node-stubs@0.3.2
+182 silly currentTree | +-- asn1.js@4.9.1
+182 silly currentTree | +-- assert@1.4.1
+182 silly currentTree | +-- balanced-match@1.0.0
+182 silly currentTree | +-- base64-js@1.2.1
+182 silly currentTree | +-- Base64@0.2.1
+182 silly currentTree | +-- bn.js@4.11.8
+182 silly currentTree | +-- brace-expansion@1.1.8
+182 silly currentTree | +-- brorand@1.1.0
+182 silly currentTree | +-- browserify-aes@1.1.0
+182 silly currentTree | +-- browserify-cipher@1.0.0
+182 silly currentTree | +-- browserify-des@1.0.0
+182 silly currentTree | +-- browserify-rsa@4.0.1
+182 silly currentTree | +-- browserify-sign@4.0.4
+182 silly currentTree | +-- browserify-zlib@0.1.4
+182 silly currentTree | +-- buffer-xor@1.0.3
+182 silly currentTree | +-- buffer@4.9.1
+182 silly currentTree | +-- cipher-base@1.0.4
+182 silly currentTree | +-- concat-map@0.0.1
+182 silly currentTree | +-- console-browserify@1.1.0
+182 silly currentTree | +-- constants-browserify@1.0.0
+182 silly currentTree | +-- create-ecdh@4.0.0
+182 silly currentTree | +-- create-hash@1.1.3
+182 silly currentTree | +-- create-hmac@1.1.6
+182 silly currentTree | +-- crypto-browserify@3.11.1
+182 silly currentTree | +-- date-now@0.1.4
+182 silly currentTree | +-- des.js@1.0.0
+182 silly currentTree | +-- diffie-hellman@5.0.2
+182 silly currentTree | +-- domain-browser@1.1.7
+182 silly currentTree | +-- elliptic@6.4.0
+182 silly currentTree | +-- events@1.1.1
+182 silly currentTree | +-- evp_bytestokey@1.0.3
+182 silly currentTree | +-- fs.realpath@1.0.0
+182 silly currentTree | +-- glob@7.1.2
+182 silly currentTree | +-- hash-base@2.0.2
+182 silly currentTree | +-- hash.js@1.1.3
+182 silly currentTree | | `-- inherits@2.0.3
+182 silly currentTree | +-- hmac-drbg@1.0.1
+182 silly currentTree | +-- http-browserify@1.7.0
+182 silly currentTree | +-- https-browserify@0.0.1
+182 silly currentTree | +-- ieee754@1.1.8
+182 silly currentTree | +-- indexof@0.0.1
+182 silly currentTree | +-- inflight@1.0.6
+182 silly currentTree | +-- inherits@2.0.1
+182 silly currentTree | +-- isarray@1.0.0
+182 silly currentTree | +-- md5.js@1.3.4
+182 silly currentTree | | `-- hash-base@3.0.4
+182 silly currentTree | +-- miller-rabin@4.0.1
+182 silly currentTree | +-- minimalistic-assert@1.0.0
+182 silly currentTree | +-- minimalistic-crypto-utils@1.0.1
+182 silly currentTree | +-- minimatch@3.0.4
+182 silly currentTree | +-- once@1.4.0
+182 silly currentTree | +-- os-browserify@0.2.1
+182 silly currentTree | +-- pako@0.2.9
+182 silly currentTree | +-- parse-asn1@5.1.0
+182 silly currentTree | +-- path-browserify@0.0.0
+182 silly currentTree | +-- path-is-absolute@1.0.1
+182 silly currentTree | +-- pbkdf2@3.0.14
+182 silly currentTree | +-- process-nextick-args@1.0.7
+182 silly currentTree | +-- process@0.11.10
+182 silly currentTree | +-- public-encrypt@4.0.0
+182 silly currentTree | +-- punycode@1.4.1
+182 silly currentTree | +-- querystring-es3@0.2.1
+182 silly currentTree | +-- querystring@0.2.0
+182 silly currentTree | +-- randombytes@2.0.5
+182 silly currentTree | +-- readable-stream@2.3.3
+182 silly currentTree | | `-- inherits@2.0.3
+182 silly currentTree | +-- rimraf@2.6.2
+182 silly currentTree | +-- ripemd160@2.0.1
+182 silly currentTree | +-- safe-buffer@5.1.1
+182 silly currentTree | +-- sha.js@2.4.9
+182 silly currentTree | +-- stream-browserify@2.0.1
+182 silly currentTree | +-- string_decoder@1.0.3
+182 silly currentTree | +-- timers-browserify@1.4.2
+182 silly currentTree | +-- tty-browserify@0.0.0
+182 silly currentTree | +-- url@0.11.0
+182 silly currentTree | | `-- punycode@1.3.2
+182 silly currentTree | +-- util-deprecate@1.0.2
+182 silly currentTree | +-- util@0.10.3
+182 silly currentTree | +-- vm-browserify@0.0.4
+182 silly currentTree | `-- wrappy@1.0.2
+182 silly currentTree +-- minimatch@3.0.4
+182 silly currentTree +-- minimist@0.0.8
+182 silly currentTree +-- mkdirp@0.5.1
+182 silly currentTree +-- mobile-detect@1.4.1
+182 silly currentTree +-- moment-timezone@0.5.14
+182 silly currentTree +-- moment@2.19.4
+182 silly currentTree +-- ms@2.0.0
+182 silly currentTree +-- natives@1.1.1
+182 silly currentTree +-- node-fetch@1.7.3
+182 silly currentTree +-- node-schedule@1.3.0
+182 silly currentTree +-- normalize-path@2.1.1
+182 silly currentTree +-- object-assign@4.1.1
+182 silly currentTree +-- object-extended@0.0.7
+182 silly currentTree +-- object-keys@1.0.11
+182 silly currentTree +-- once@1.4.0
+182 silly currentTree +-- over@0.0.5
+182 silly currentTree +-- pako@1.0.6
+182 silly currentTree +-- path-is-absolute@1.0.1
+182 silly currentTree +-- performance-now@2.1.0
+182 silly currentTree +-- process-nextick-args@1.0.7
+182 silly currentTree +-- promise@7.3.1
+182 silly currentTree +-- promish@5.0.2
+182 silly currentTree +-- prop-types@15.6.0
+182 silly currentTree +-- pullstream@0.4.1
+182 silly currentTree | +-- isarray@0.0.1
+182 silly currentTree | +-- readable-stream@1.0.34
+182 silly currentTree | `-- string_decoder@0.10.31
+182 silly currentTree +-- raf@3.4.0
+182 silly currentTree +-- ramda@0.24.1
+182 silly currentTree +-- react-addons-css-transition-group@15.6.2
+182 silly currentTree +-- react-addons-pure-render-mixin@15.6.2
+182 silly currentTree +-- react-dom@15.6.2
+182 silly currentTree +-- react-event-listener@0.5.1
+182 silly currentTree +-- react-komposer@2.0.0
+182 silly currentTree | `-- hoist-non-react-statics@1.2.0
+182 silly currentTree +-- react-meteor-data@0.2.11
+182 silly currentTree +-- react-mounter@1.2.0
+182 silly currentTree +-- react-redux@5.0.6
+182 silly currentTree +-- react-stubber@1.0.0
+182 silly currentTree +-- react-swipeable-views-core@0.12.11
+182 silly currentTree +-- react-swipeable-views-utils@0.12.11
+182 silly currentTree +-- react-swipeable-views@0.12.12
+182 silly currentTree +-- react-tap-event-plugin@2.0.1
+182 silly currentTree +-- react-tooltip@3.4.0
+182 silly currentTree +-- react-transition-group@1.2.1
+182 silly currentTree +-- react@15.6.2
+182 silly currentTree +-- readable-stream@2.3.3
+182 silly currentTree +-- recompose@0.26.0
+182 silly currentTree +-- redux-form-material-ui@4.3.1
+182 silly currentTree +-- redux-form-submit@0.1.3
+182 silly currentTree +-- redux-form@6.8.0
+182 silly currentTree | `-- hoist-non-react-statics@1.2.0
+182 silly currentTree +-- redux-logger@2.10.2
+182 silly currentTree +-- redux-persist@4.10.2
+182 silly currentTree +-- redux-thunk@2.2.0
+182 silly currentTree +-- redux@3.7.2
+182 silly currentTree +-- regenerator-runtime@0.11.1
+182 silly currentTree +-- remove-trailing-separator@1.1.0
+182 silly currentTree +-- retry-as-promised@2.3.2
+182 silly currentTree | `-- debug@2.6.9
+182 silly currentTree +-- rimraf@2.6.2
+182 silly currentTree +-- safe-buffer@5.1.1
+182 silly currentTree +-- sax@1.2.4
+182 silly currentTree +-- scroll-into-view-if-needed@1.4.0
+182 silly currentTree +-- semver@5.4.1
+182 silly currentTree +-- sequelize@4.28.0
+182 silly currentTree +-- setimmediate@1.0.5
+182 silly currentTree +-- shallowequal@0.2.2
+182 silly currentTree +-- shimmer@1.2.0
+182 silly currentTree +-- simple-assign@0.1.0
+182 silly currentTree +-- slice-stream@1.0.0
+182 silly currentTree | +-- isarray@0.0.1
+182 silly currentTree | +-- readable-stream@1.0.34
+182 silly currentTree | `-- string_decoder@0.10.31
+182 silly currentTree +-- sorted-array-functions@1.1.0
+182 silly currentTree +-- sprintf@0.1.5
+182 silly currentTree +-- string_decoder@1.0.3
+182 silly currentTree +-- string-extended@0.0.8
+182 silly currentTree +-- symbol-observable@1.1.0
+182 silly currentTree +-- tar-stream@1.5.5
+182 silly currentTree +-- tedious@2.1.5
+182 silly currentTree +-- terraformer-wkt-parser@1.1.2
+182 silly currentTree +-- terraformer@1.0.8
+182 silly currentTree +-- toposort-class@1.0.1
+182 silly currentTree +-- traverse@0.3.9
+182 silly currentTree +-- ua-parser-js@0.7.17
+182 silly currentTree +-- unzip2@0.2.5
+182 silly currentTree | +-- isarray@0.0.1
+182 silly currentTree | +-- readable-stream@1.0.34
+182 silly currentTree | `-- string_decoder@0.10.31
+182 silly currentTree +-- util-deprecate@1.0.2
+182 silly currentTree +-- uuid@3.1.0
+182 silly currentTree +-- validator@9.2.0
+182 silly currentTree +-- walkdir@0.0.11
+182 silly currentTree +-- warning@3.0.0
+182 silly currentTree +-- whatwg-fetch@2.0.3
+182 silly currentTree +-- wkx@0.4.2
+182 silly currentTree +-- wrappy@1.0.2
+182 silly currentTree +-- xtend@4.0.1
+182 silly currentTree `-- zip-stream@1.2.0
+183 silly idealTree WIFIGO@
+183 silly idealTree +-- @types/geojson@1.0.6
+183 silly idealTree +-- @types/node@8.0.58
+183 silly idealTree +-- amator@1.0.1
+183 silly idealTree +-- archiver-utils@1.3.0
+183 silly idealTree +-- archiver@1.3.0
+183 silly idealTree +-- arguments-extended@0.0.3
+183 silly idealTree +-- array-extended@0.0.11
+183 silly idealTree +-- asap@2.0.6
+183 silly idealTree +-- async@2.6.0
+183 silly idealTree +-- babel-runtime@6.26.0
+183 silly idealTree +-- balanced-match@1.0.0
+183 silly idealTree +-- bezier-easing@2.0.3
+183 silly idealTree +-- big-number@0.3.1
+183 silly idealTree +-- binary@0.3.0
+183 silly idealTree +-- bl@1.2.1
+183 silly idealTree +-- bluebird@3.5.1
+183 silly idealTree +-- bowser@1.8.1
+183 silly idealTree +-- brace-expansion@1.1.11
+183 silly idealTree +-- buffer-crc32@0.2.13
+183 silly idealTree +-- buffers@0.1.1
+183 silly idealTree +-- chain-function@1.0.0
+183 silly idealTree +-- chainsaw@0.1.0
+183 silly idealTree +-- change-emitter@0.1.6
+183 silly idealTree +-- classnames@2.2.5
+183 silly idealTree +-- cls-bluebird@2.1.0
+183 silly idealTree +-- compress-commons@1.2.2
+183 silly idealTree +-- concat-map@0.0.1
+183 silly idealTree +-- console-polyfill@0.3.0
+183 silly idealTree +-- core-js@2.5.3
+183 silly idealTree +-- core-util-is@1.0.2
+183 silly idealTree +-- crc@3.5.0
+183 silly idealTree +-- crc32-stream@2.0.0
+183 silly idealTree +-- cron-parser@2.4.4
+183 silly idealTree +-- css-in-js-utils@2.0.0
+183 silly idealTree +-- date-extended@0.0.6
+183 silly idealTree +-- debug@3.1.0
+183 silly idealTree +-- declare.js@0.0.8
+183 silly idealTree +-- deep-diff@0.3.4
+183 silly idealTree +-- deep-equal@1.0.1
+183 silly idealTree +-- define-properties@1.1.2
+183 silly idealTree +-- depd@1.1.1
+183 silly idealTree +-- dom-helpers@3.2.1
+183 silly idealTree +-- domready@1.0.8
+183 silly idealTree +-- dottie@2.0.0
+183 silly idealTree +-- encoding@0.1.12
+183 silly idealTree +-- end-of-stream@1.4.1
+183 silly idealTree +-- es5-shim@4.5.10
+183 silly idealTree +-- es6-error@4.0.2
+183 silly idealTree +-- es6-promise@3.0.2
+183 silly idealTree +-- exceljs@0.8.2
+183 silly idealTree | `-- moment@2.19.3
+183 silly idealTree +-- extended@0.0.6
+183 silly idealTree +-- extender@0.0.10
+183 silly idealTree +-- fast-csv@2.4.1
+183 silly idealTree +-- fbjs@0.8.16
+183 silly idealTree | `-- core-js@1.2.7
+183 silly idealTree +-- fibers@2.0.0
+183 silly idealTree +-- foreach@2.0.5
+183 silly idealTree +-- fs.realpath@1.0.0
+183 silly idealTree +-- fstream@0.1.31
+183 silly idealTree | `-- graceful-fs@3.0.11
+183 silly idealTree +-- generic-pool@3.2.0
+183 silly idealTree +-- glob@7.1.2
+183 silly idealTree +-- graceful-fs@4.1.11
+183 silly idealTree +-- hoist-non-react-statics@2.3.1
+183 silly idealTree +-- hyphenate-style-name@1.0.2
+183 silly idealTree +-- iconv-lite@0.4.19
+183 silly idealTree +-- immediate@3.0.6
+183 silly idealTree +-- inflection@1.12.0
+183 silly idealTree +-- inflight@1.0.6
+183 silly idealTree +-- inherits@2.0.3
+183 silly idealTree +-- inline-style-prefixer@3.0.8
+183 silly idealTree +-- intl-locales-supported@1.0.0
+183 silly idealTree +-- invariant@2.2.2
+183 silly idealTree +-- is-bluebird@1.0.2
+183 silly idealTree +-- is-extended@0.0.10
+183 silly idealTree +-- is-nan@1.2.1
+183 silly idealTree +-- is-promise@2.1.0
+183 silly idealTree +-- is-stream@1.1.0
+183 silly idealTree +-- isarray@1.0.0
+183 silly idealTree +-- isomorphic-fetch@2.2.1
+183 silly idealTree +-- js-tokens@3.0.2
+183 silly idealTree +-- json-stringify-safe@5.0.1
+183 silly idealTree +-- jszip@3.1.3
+183 silly idealTree | +-- core-js@2.3.0
+183 silly idealTree | +-- readable-stream@2.0.6
+183 silly idealTree | `-- string_decoder@0.10.31
+183 silly idealTree +-- keycode@2.1.9
+183 silly idealTree +-- lazystream@1.0.0
+183 silly idealTree +-- lie@3.1.1
+183 silly idealTree +-- lodash-es@4.17.4
+183 silly idealTree +-- lodash._getnative@3.9.1
+183 silly idealTree +-- lodash.isarguments@3.1.0
+183 silly idealTree +-- lodash.isarray@3.0.4
+183 silly idealTree +-- lodash.keys@3.1.2
+183 silly idealTree +-- lodash.merge@4.6.0
+183 silly idealTree +-- lodash.pick@4.4.0
+183 silly idealTree +-- lodash.throttle@4.1.1
+183 silly idealTree +-- lodash@4.17.4
+183 silly idealTree +-- long-timeout@0.1.1
+183 silly idealTree +-- loose-envify@1.3.1
+183 silly idealTree +-- match-stream@0.0.2
+183 silly idealTree | +-- isarray@0.0.1
+183 silly idealTree | +-- readable-stream@1.0.34
+183 silly idealTree | `-- string_decoder@0.10.31
+183 silly idealTree +-- material-ui@0.19.4
+183 silly idealTree +-- meteor-node-stubs@0.3.2
+183 silly idealTree | +-- asn1.js@4.9.1
+183 silly idealTree | +-- assert@1.4.1
+183 silly idealTree | +-- balanced-match@1.0.0
+183 silly idealTree | +-- base64-js@1.2.1
+183 silly idealTree | +-- Base64@0.2.1
+183 silly idealTree | +-- bn.js@4.11.8
+183 silly idealTree | +-- brace-expansion@1.1.8
+183 silly idealTree | +-- brorand@1.1.0
+183 silly idealTree | +-- browserify-aes@1.1.0
+183 silly idealTree | +-- browserify-cipher@1.0.0
+183 silly idealTree | +-- browserify-des@1.0.0
+183 silly idealTree | +-- browserify-rsa@4.0.1
+183 silly idealTree | +-- browserify-sign@4.0.4
+183 silly idealTree | +-- browserify-zlib@0.1.4
+183 silly idealTree | +-- buffer-xor@1.0.3
+183 silly idealTree | +-- buffer@4.9.1
+183 silly idealTree | +-- cipher-base@1.0.4
+183 silly idealTree | +-- concat-map@0.0.1
+183 silly idealTree | +-- console-browserify@1.1.0
+183 silly idealTree | +-- constants-browserify@1.0.0
+183 silly idealTree | +-- create-ecdh@4.0.0
+183 silly idealTree | +-- create-hash@1.1.3
+183 silly idealTree | +-- create-hmac@1.1.6
+183 silly idealTree | +-- crypto-browserify@3.11.1
+183 silly idealTree | +-- date-now@0.1.4
+183 silly idealTree | +-- des.js@1.0.0
+183 silly idealTree | +-- diffie-hellman@5.0.2
+183 silly idealTree | +-- domain-browser@1.1.7
+183 silly idealTree | +-- elliptic@6.4.0
+183 silly idealTree | +-- events@1.1.1
+183 silly idealTree | +-- evp_bytestokey@1.0.3
+183 silly idealTree | +-- fs.realpath@1.0.0
+183 silly idealTree | +-- glob@7.1.2
+183 silly idealTree | +-- hash-base@2.0.2
+183 silly idealTree | +-- hash.js@1.1.3
+183 silly idealTree | | `-- inherits@2.0.3
+183 silly idealTree | +-- hmac-drbg@1.0.1
+183 silly idealTree | +-- http-browserify@1.7.0
+183 silly idealTree | +-- https-browserify@0.0.1
+183 silly idealTree | +-- ieee754@1.1.8
+183 silly idealTree | +-- indexof@0.0.1
+183 silly idealTree | +-- inflight@1.0.6
+183 silly idealTree | +-- inherits@2.0.1
+183 silly idealTree | +-- isarray@1.0.0
+183 silly idealTree | +-- md5.js@1.3.4
+183 silly idealTree | | `-- hash-base@3.0.4
+183 silly idealTree | +-- miller-rabin@4.0.1
+183 silly idealTree | +-- minimalistic-assert@1.0.0
+183 silly idealTree | +-- minimalistic-crypto-utils@1.0.1
+183 silly idealTree | +-- minimatch@3.0.4
+183 silly idealTree | +-- once@1.4.0
+183 silly idealTree | +-- os-browserify@0.2.1
+183 silly idealTree | +-- pako@0.2.9
+183 silly idealTree | +-- parse-asn1@5.1.0
+183 silly idealTree | +-- path-browserify@0.0.0
+183 silly idealTree | +-- path-is-absolute@1.0.1
+183 silly idealTree | +-- pbkdf2@3.0.14
+183 silly idealTree | +-- process-nextick-args@1.0.7
+183 silly idealTree | +-- process@0.11.10
+183 silly idealTree | +-- public-encrypt@4.0.0
+183 silly idealTree | +-- punycode@1.4.1
+183 silly idealTree | +-- querystring-es3@0.2.1
+183 silly idealTree | +-- querystring@0.2.0
+183 silly idealTree | +-- randombytes@2.0.5
+183 silly idealTree | +-- readable-stream@2.3.3
+183 silly idealTree | | `-- inherits@2.0.3
+183 silly idealTree | +-- rimraf@2.6.2
+183 silly idealTree | +-- ripemd160@2.0.1
+183 silly idealTree | +-- safe-buffer@5.1.1
+183 silly idealTree | +-- sha.js@2.4.9
+183 silly idealTree | +-- stream-browserify@2.0.1
+183 silly idealTree | +-- string_decoder@1.0.3
+183 silly idealTree | +-- timers-browserify@1.4.2
+183 silly idealTree | +-- tty-browserify@0.0.0
+183 silly idealTree | +-- url@0.11.0
+183 silly idealTree | | `-- punycode@1.3.2
+183 silly idealTree | +-- util-deprecate@1.0.2
+183 silly idealTree | +-- util@0.10.3
+183 silly idealTree | +-- vm-browserify@0.0.4
+183 silly idealTree | `-- wrappy@1.0.2
+183 silly idealTree +-- minimatch@3.0.4
+183 silly idealTree +-- minimist@0.0.8
+183 silly idealTree +-- mkdirp@0.5.1
+183 silly idealTree +-- mobile-detect@1.4.1
+183 silly idealTree +-- moment-timezone@0.5.14
+183 silly idealTree +-- moment@2.19.4
+183 silly idealTree +-- ms@2.0.0
+183 silly idealTree +-- natives@1.1.1
+183 silly idealTree +-- node-fetch@1.7.3
+183 silly idealTree +-- node-schedule@1.3.0
+183 silly idealTree +-- normalize-path@2.1.1
+183 silly idealTree +-- object-assign@4.1.1
+183 silly idealTree +-- object-extended@0.0.7
+183 silly idealTree +-- object-keys@1.0.11
+183 silly idealTree +-- once@1.4.0
+183 silly idealTree +-- over@0.0.5
+183 silly idealTree +-- pako@1.0.6
+183 silly idealTree +-- path-is-absolute@1.0.1
+183 silly idealTree +-- performance-now@2.1.0
+183 silly idealTree +-- process-nextick-args@1.0.7
+183 silly idealTree +-- promise@7.3.1
+183 silly idealTree +-- promish@5.0.2
+183 silly idealTree +-- prop-types@15.6.0
+183 silly idealTree +-- pullstream@0.4.1
+183 silly idealTree | +-- isarray@0.0.1
+183 silly idealTree | +-- readable-stream@1.0.34
+183 silly idealTree | `-- string_decoder@0.10.31
+183 silly idealTree +-- raf@3.4.0
+183 silly idealTree +-- ramda@0.24.1
+183 silly idealTree +-- react-addons-css-transition-group@15.6.2
+183 silly idealTree +-- react-addons-pure-render-mixin@15.6.2
+183 silly idealTree +-- react-dom@16.2.0
+183 silly idealTree +-- react-event-listener@0.5.1
+183 silly idealTree +-- react-komposer@2.0.0
+183 silly idealTree | `-- hoist-non-react-statics@1.2.0
+183 silly idealTree +-- react-meteor-data@0.2.11
+183 silly idealTree +-- react-mounter@1.2.0
+183 silly idealTree +-- react-redux@5.0.6
+183 silly idealTree +-- react-stubber@1.0.0
+183 silly idealTree +-- react-swipeable-views-core@0.12.11
+183 silly idealTree +-- react-swipeable-views-utils@0.12.11
+183 silly idealTree +-- react-swipeable-views@0.12.12
+183 silly idealTree +-- react-tap-event-plugin@3.0.2
+183 silly idealTree +-- react-tooltip@3.4.0
+183 silly idealTree +-- react-transition-group@1.2.1
+183 silly idealTree +-- react@16.2.0
+183 silly idealTree +-- readable-stream@2.3.3
+183 silly idealTree +-- recompose@0.26.0
+183 silly idealTree +-- redux-form-material-ui@4.3.1
+183 silly idealTree +-- redux-form-submit@0.1.3
+183 silly idealTree +-- redux-form@6.8.0
+183 silly idealTree | `-- hoist-non-react-statics@1.2.0
+183 silly idealTree +-- redux-logger@2.10.2
+183 silly idealTree +-- redux-persist@4.10.2
+183 silly idealTree +-- redux-thunk@2.2.0
+183 silly idealTree +-- redux@3.7.2
+183 silly idealTree +-- regenerator-runtime@0.11.1
+183 silly idealTree +-- remove-trailing-separator@1.1.0
+183 silly idealTree +-- retry-as-promised@2.3.2
+183 silly idealTree | `-- debug@2.6.9
+183 silly idealTree +-- rimraf@2.6.2
+183 silly idealTree +-- safe-buffer@5.1.1
+183 silly idealTree +-- sax@1.2.4
+183 silly idealTree +-- scroll-into-view-if-needed@1.4.0
+183 silly idealTree +-- semver@5.4.1
+183 silly idealTree +-- sequelize@4.28.0
+183 silly idealTree +-- setimmediate@1.0.5
+183 silly idealTree +-- shallowequal@0.2.2
+183 silly idealTree +-- shimmer@1.2.0
+183 silly idealTree +-- simple-assign@0.1.0
+183 silly idealTree +-- slice-stream@1.0.0
+183 silly idealTree | +-- isarray@0.0.1
+183 silly idealTree | +-- readable-stream@1.0.34
+183 silly idealTree | `-- string_decoder@0.10.31
+183 silly idealTree +-- sorted-array-functions@1.1.0
+183 silly idealTree +-- sprintf@0.1.5
+183 silly idealTree +-- string_decoder@1.0.3
+183 silly idealTree +-- string-extended@0.0.8
+183 silly idealTree +-- symbol-observable@1.1.0
+183 silly idealTree +-- tar-stream@1.5.5
+183 silly idealTree +-- tedious@2.1.5
+183 silly idealTree +-- terraformer-wkt-parser@1.1.2
+183 silly idealTree +-- terraformer@1.0.8
+183 silly idealTree +-- toposort-class@1.0.1
+183 silly idealTree +-- traverse@0.3.9
+183 silly idealTree +-- ua-parser-js@0.7.17
+183 silly idealTree +-- unzip2@0.2.5
+183 silly idealTree | +-- isarray@0.0.1
+183 silly idealTree | +-- readable-stream@1.0.34
+183 silly idealTree | `-- string_decoder@0.10.31
+183 silly idealTree +-- util-deprecate@1.0.2
+183 silly idealTree +-- uuid@3.1.0
+183 silly idealTree +-- validator@9.2.0
+183 silly idealTree +-- walkdir@0.0.11
+183 silly idealTree +-- warning@3.0.0
+183 silly idealTree +-- whatwg-fetch@2.0.3
+183 silly idealTree +-- wkx@0.4.2
+183 silly idealTree +-- wrappy@1.0.2
+183 silly idealTree +-- xtend@4.0.1
+183 silly idealTree `-- zip-stream@1.2.0
+184 silly generateActionsToTake Starting
+185 silly install generateActionsToTake
+186 silly generateActionsToTake Finishing
+187 silly diffTrees action count 5
+188 silly diffTrees remove create-react-class@15.6.2
+189 silly diffTrees add fibers@2.0.0
+190 silly diffTrees update react@16.2.0
+191 silly diffTrees update react-dom@16.2.0
+192 silly diffTrees update react-tap-event-plugin@3.0.2
+193 silly decomposeActions action count 36
+194 silly decomposeActions remove create-react-class@15.6.2
+195 silly decomposeActions fetch fibers@2.0.0
+196 silly decomposeActions extract fibers@2.0.0
+197 silly decomposeActions test fibers@2.0.0
+198 silly decomposeActions preinstall fibers@2.0.0
+199 silly decomposeActions build fibers@2.0.0
+200 silly decomposeActions install fibers@2.0.0
+201 silly decomposeActions postinstall fibers@2.0.0
+202 silly decomposeActions finalize fibers@2.0.0
+203 silly decomposeActions remove react@16.2.0
+204 silly decomposeActions fetch react@16.2.0
+205 silly decomposeActions extract react@16.2.0
+206 silly decomposeActions test react@16.2.0
+207 silly decomposeActions preinstall react@16.2.0
+208 silly decomposeActions build react@16.2.0
+209 silly decomposeActions install react@16.2.0
+210 silly decomposeActions postinstall react@16.2.0
+211 silly decomposeActions finalize react@16.2.0
+212 silly decomposeActions remove react-dom@16.2.0
+213 silly decomposeActions fetch react-dom@16.2.0
+214 silly decomposeActions extract react-dom@16.2.0
+215 silly decomposeActions test react-dom@16.2.0
+216 silly decomposeActions preinstall react-dom@16.2.0
+217 silly decomposeActions build react-dom@16.2.0
+218 silly decomposeActions install react-dom@16.2.0
+219 silly decomposeActions postinstall react-dom@16.2.0
+220 silly decomposeActions finalize react-dom@16.2.0
+221 silly decomposeActions remove react-tap-event-plugin@3.0.2
+222 silly decomposeActions fetch react-tap-event-plugin@3.0.2
+223 silly decomposeActions extract react-tap-event-plugin@3.0.2
+224 silly decomposeActions test react-tap-event-plugin@3.0.2
+225 silly decomposeActions preinstall react-tap-event-plugin@3.0.2
+226 silly decomposeActions build react-tap-event-plugin@3.0.2
+227 silly decomposeActions install react-tap-event-plugin@3.0.2
+228 silly decomposeActions postinstall react-tap-event-plugin@3.0.2
+229 silly decomposeActions finalize react-tap-event-plugin@3.0.2
+230 silly runTopLevelLifecycles Starting
+231 silly install runPreinstallTopLevelLifecycles
+232 silly preinstall WIFIGO@ C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\WIFIGO-f80a39bb
+233 info lifecycle WIFIGO@~preinstall: WIFIGO@
+234 silly lifecycle WIFIGO@~preinstall: no script for preinstall, continuing
+235 silly executeActions Starting
+236 silly install executeActions
+237 silly doSerial global-install 0
+238 silly doParallel fetch 4
+239 verbose correctMkdir C:\Users\Administrateur\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+240 verbose lock using C:\Users\Administrateur\AppData\Roaming\npm-cache\_locks\staging-f4d09e5e2d646804.lock for C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging
+241 silly doParallel extract 4
+242 silly extract fibers@2.0.0
+243 silly extract react@16.2.0
+244 silly extract react-dom@16.2.0
+245 silly extract react-tap-event-plugin@3.0.2
+246 verbose unbuild node_modules\.staging\fibers-e15adf57
+247 verbose unbuild node_modules\.staging\react-dom-5df9268c
+248 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57 is being purged from base C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+249 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57
+250 verbose unbuild node_modules\.staging\react-7c998223
+251 verbose unbuild node_modules\.staging\react-tap-event-plugin-01d73851
+252 verbose tar unpack C:\Users\Administrateur\AppData\Roaming\npm-cache\fibers\2.0.0\package.tgz
+253 verbose tar unpacking to C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57
+254 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57 is being purged
+255 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57
+256 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-dom-5df9268c is being purged from base C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+257 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-dom-5df9268c
+258 silly gunzTarPerm modes [ '777', '666' ]
+259 verbose tar unpack C:\Users\Administrateur\AppData\Roaming\npm-cache\react-dom\16.2.0\package.tgz
+260 verbose tar unpacking to C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-dom-5df9268c
+261 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-dom-5df9268c is being purged
+262 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-dom-5df9268c
+263 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-7c998223 is being purged from base C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+264 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-7c998223
+265 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-tap-event-plugin-01d73851 is being purged from base C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+266 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-tap-event-plugin-01d73851
+267 silly gunzTarPerm modes [ '777', '666' ]
+268 verbose tar unpack C:\Users\Administrateur\AppData\Roaming\npm-cache\react\16.2.0\package.tgz
+269 verbose tar unpacking to C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-7c998223
+270 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-7c998223 is being purged
+271 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-7c998223
+272 verbose tar unpack C:\Users\Administrateur\AppData\Roaming\npm-cache\react-tap-event-plugin\3.0.2\package.tgz
+273 verbose tar unpacking to C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-tap-event-plugin-01d73851
+274 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-tap-event-plugin-01d73851 is being purged
+275 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-tap-event-plugin-01d73851
+276 silly gunzTarPerm modes [ '777', '666' ]
+277 silly gunzTarPerm modes [ '777', '666' ]
+278 silly gunzTarPerm extractEntry package.json
+279 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+280 silly gunzTarPerm extractEntry package.json
+281 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+282 silly gunzTarPerm extractEntry package.json
+283 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+284 silly gunzTarPerm extractEntry package.json
+285 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+286 silly gunzTarPerm extractEntry .npmignore
+287 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+288 silly gunzTarPerm extractEntry README.md
+289 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+290 silly gunzTarPerm extractEntry README.md
+291 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+292 silly gunzTarPerm extractEntry LICENSE
+293 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+294 silly gunzTarPerm extractEntry README.md
+295 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+296 silly gunzTarPerm extractEntry LICENSE
+297 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+298 silly gunzTarPerm extractEntry README.md
+299 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+300 silly gunzTarPerm extractEntry LICENSE
+301 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+302 silly gunzTarPerm extractEntry LICENSE
+303 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+304 silly gunzTarPerm extractEntry test-utils.js
+305 silly gunzTarPerm modified mode [ 'test-utils.js', 420, 438 ]
+306 silly gunzTarPerm extractEntry index.js
+307 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+308 silly gunzTarPerm extractEntry index.js
+309 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+310 silly gunzTarPerm extractEntry cjs/react.development.js
+311 silly gunzTarPerm modified mode [ 'cjs/react.development.js', 420, 438 ]
+312 silly gunzTarPerm extractEntry cjs/react.production.min.js
+313 silly gunzTarPerm modified mode [ 'cjs/react.production.min.js', 420, 438 ]
+314 silly gunzTarPerm extractEntry umd/react.development.js
+315 silly gunzTarPerm modified mode [ 'umd/react.development.js', 420, 438 ]
+316 silly gunzTarPerm extractEntry umd/react.production.min.js
+317 silly gunzTarPerm modified mode [ 'umd/react.production.min.js', 420, 438 ]
+318 silly gunzTarPerm extractEntry src/SyntheticEvent.js
+319 silly gunzTarPerm modified mode [ 'src/SyntheticEvent.js', 420, 438 ]
+320 silly gunzTarPerm extractEntry src/TapEventPlugin.js
+321 silly gunzTarPerm modified mode [ 'src/TapEventPlugin.js', 420, 438 ]
+322 silly gunzTarPerm extractEntry src/defaultClickRejectionStrategy.js
+323 silly gunzTarPerm modified mode [ 'src/defaultClickRejectionStrategy.js', 420, 438 ]
+324 silly gunzTarPerm extractEntry src/injectTapEventPlugin.js
+325 silly gunzTarPerm modified mode [ 'src/injectTapEventPlugin.js', 420, 438 ]
+326 silly gunzTarPerm extractEntry quick-test.js
+327 silly gunzTarPerm modified mode [ 'quick-test.js', 420, 438 ]
+328 silly gunzTarPerm extractEntry build.js
+329 silly gunzTarPerm modified mode [ 'build.js', 493, 511 ]
+330 silly gunzTarPerm extractEntry future.js
+331 silly gunzTarPerm modified mode [ 'future.js', 420, 438 ]
+332 silly gunzTarPerm extractEntry server.js
+333 silly gunzTarPerm modified mode [ 'server.js', 420, 438 ]
+334 silly gunzTarPerm extractEntry server.node.js
+335 silly gunzTarPerm modified mode [ 'server.node.js', 420, 438 ]
+336 silly gunzTarPerm extractEntry test.js
+337 silly gunzTarPerm modified mode [ 'test.js', 493, 511 ]
+338 silly gunzTarPerm extractEntry fibers.js
+339 silly gunzTarPerm modified mode [ 'fibers.js', 420, 438 ]
+340 silly gunzTarPerm extractEntry unstable-native-dependencies.js
+341 silly gunzTarPerm modified mode [ 'unstable-native-dependencies.js', 420, 438 ]
+342 silly gunzTarPerm extractEntry server.browser.js
+343 silly gunzTarPerm modified mode [ 'server.browser.js', 420, 438 ]
+344 silly gunzTarPerm extractEntry .travis.yml
+345 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+346 silly gunzTarPerm extractEntry binding.gyp
+347 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+348 silly gunzTarPerm extractEntry cjs/react-dom-server.browser.development.js
+349 silly gunzTarPerm modified mode [ 'cjs/react-dom-server.browser.development.js', 420, 438 ]
+350 silly gunzTarPerm extractEntry cjs/react-dom-server.browser.production.min.js
+351 silly gunzTarPerm modified mode [ 'cjs/react-dom-server.browser.production.min.js', 420, 438 ]
+352 silly gunzTarPerm extractEntry bin/.npmignore
+353 silly gunzTarPerm modified mode [ 'bin/.npmignore', 420, 438 ]
+354 silly gunzTarPerm extractEntry bin/win32-x64-57/fibers.node
+355 silly gunzTarPerm modified mode [ 'bin/win32-x64-57/fibers.node', 493, 511 ]
+356 silly gunzTarPerm extractEntry cjs/react-dom-server.node.development.js
+357 silly gunzTarPerm modified mode [ 'cjs/react-dom-server.node.development.js', 420, 438 ]
+358 silly gunzTarPerm extractEntry cjs/react-dom-server.node.production.min.js
+359 silly gunzTarPerm modified mode [ 'cjs/react-dom-server.node.production.min.js', 420, 438 ]
+360 silly gunzTarPerm extractEntry cjs/react-dom-test-utils.development.js
+361 silly gunzTarPerm modified mode [ 'cjs/react-dom-test-utils.development.js', 420, 438 ]
+362 silly gunzTarPerm extractEntry cjs/react-dom-test-utils.production.min.js
+363 silly gunzTarPerm modified mode [ 'cjs/react-dom-test-utils.production.min.js', 420, 438 ]
+364 silly gunzTarPerm extractEntry bin/darwin-ia32-57/fibers.node
+365 silly gunzTarPerm modified mode [ 'bin/darwin-ia32-57/fibers.node', 493, 511 ]
+366 silly gunzTarPerm extractEntry cjs/react-dom-unstable-native-dependencies.development.js
+367 silly gunzTarPerm modified mode [ 'cjs/react-dom-unstable-native-dependencies.development.js',
+367 silly gunzTarPerm   420,
+367 silly gunzTarPerm   438 ]
+368 silly gunzTarPerm extractEntry cjs/react-dom-unstable-native-dependencies.production.min.js
+369 silly gunzTarPerm modified mode [ 'cjs/react-dom-unstable-native-dependencies.production.min.js',
+369 silly gunzTarPerm   420,
+369 silly gunzTarPerm   438 ]
+370 silly gunzTarPerm extractEntry bin/darwin-x64-48/fibers.node
+371 silly gunzTarPerm modified mode [ 'bin/darwin-x64-48/fibers.node', 493, 511 ]
+372 silly gunzTarPerm extractEntry cjs/react-dom.development.js
+373 silly gunzTarPerm modified mode [ 'cjs/react-dom.development.js', 420, 438 ]
+374 silly gunzTarPerm extractEntry bin/darwin-x64-57/fibers.node
+375 silly gunzTarPerm modified mode [ 'bin/darwin-x64-57/fibers.node', 493, 511 ]
+376 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-tap-event-plugin-01d73851\node_modules is being purged
+377 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-tap-event-plugin-01d73851\node_modules
+378 silly gunzTarPerm extractEntry bin/linux-ia32-48/fibers.node
+379 silly gunzTarPerm modified mode [ 'bin/linux-ia32-48/fibers.node', 493, 511 ]
+380 silly gunzTarPerm extractEntry bin/linux-ia32-57/fibers.node
+381 silly gunzTarPerm modified mode [ 'bin/linux-ia32-57/fibers.node', 493, 511 ]
+382 silly gunzTarPerm extractEntry cjs/react-dom.production.min.js
+383 silly gunzTarPerm modified mode [ 'cjs/react-dom.production.min.js', 420, 438 ]
+384 silly gunzTarPerm extractEntry bin/darwin-ia32-48/fibers.node
+385 silly gunzTarPerm modified mode [ 'bin/darwin-ia32-48/fibers.node', 493, 511 ]
+386 silly gunzTarPerm extractEntry bin/linux-x64-57/fibers.node
+387 silly gunzTarPerm modified mode [ 'bin/linux-x64-57/fibers.node', 493, 511 ]
+388 silly gunzTarPerm extractEntry umd/react-dom-server.browser.development.js
+389 silly gunzTarPerm modified mode [ 'umd/react-dom-server.browser.development.js', 420, 438 ]
+390 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-7c998223\node_modules is being purged
+391 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-7c998223\node_modules
+392 silly gunzTarPerm extractEntry bin/repl
+393 silly gunzTarPerm modified mode [ 'bin/repl', 493, 511 ]
+394 silly gunzTarPerm extractEntry umd/react-dom-server.browser.production.min.js
+395 silly gunzTarPerm modified mode [ 'umd/react-dom-server.browser.production.min.js', 420, 438 ]
+396 silly gunzTarPerm extractEntry umd/react-dom-test-utils.development.js
+397 silly gunzTarPerm modified mode [ 'umd/react-dom-test-utils.development.js', 420, 438 ]
+398 silly gunzTarPerm extractEntry umd/react-dom-test-utils.production.min.js
+399 silly gunzTarPerm modified mode [ 'umd/react-dom-test-utils.production.min.js', 420, 438 ]
+400 silly gunzTarPerm extractEntry bin/win32-ia32-48/fibers.node
+401 silly gunzTarPerm modified mode [ 'bin/win32-ia32-48/fibers.node', 420, 438 ]
+402 silly gunzTarPerm extractEntry umd/react-dom-unstable-native-dependencies.development.js
+403 silly gunzTarPerm modified mode [ 'umd/react-dom-unstable-native-dependencies.development.js',
+403 silly gunzTarPerm   420,
+403 silly gunzTarPerm   438 ]
+404 silly gunzTarPerm extractEntry umd/react-dom-unstable-native-dependencies.production.min.js
+405 silly gunzTarPerm modified mode [ 'umd/react-dom-unstable-native-dependencies.production.min.js',
+405 silly gunzTarPerm   420,
+405 silly gunzTarPerm   438 ]
+406 silly gunzTarPerm extractEntry bin/win32-ia32-57/fibers.node
+407 silly gunzTarPerm modified mode [ 'bin/win32-ia32-57/fibers.node', 493, 511 ]
+408 silly gunzTarPerm extractEntry umd/react-dom.development.js
+409 silly gunzTarPerm modified mode [ 'umd/react-dom.development.js', 420, 438 ]
+410 silly gunzTarPerm extractEntry bin/win32-x64-48/fibers.node
+411 silly gunzTarPerm modified mode [ 'bin/win32-x64-48/fibers.node', 420, 438 ]
+412 silly gunzTarPerm extractEntry umd/react-dom.production.min.js
+413 silly gunzTarPerm modified mode [ 'umd/react-dom.production.min.js', 420, 438 ]
+414 silly gunzTarPerm extractEntry bin/linux-x64-48/fibers.node
+415 silly gunzTarPerm modified mode [ 'bin/linux-x64-48/fibers.node', 493, 511 ]
+416 silly gunzTarPerm extractEntry src/coroutine.cc
+417 silly gunzTarPerm modified mode [ 'src/coroutine.cc', 420, 438 ]
+418 silly gunzTarPerm extractEntry src/coroutine.h
+419 silly gunzTarPerm modified mode [ 'src/coroutine.h', 420, 438 ]
+420 silly gunzTarPerm extractEntry src/fibers.cc
+421 silly gunzTarPerm modified mode [ 'src/fibers.cc', 420, 438 ]
+422 silly gunzTarPerm extractEntry src/libcoro/README
+423 silly gunzTarPerm modified mode [ 'src/libcoro/README', 420, 438 ]
+424 silly gunzTarPerm extractEntry src/libcoro/LICENSE
+425 silly gunzTarPerm modified mode [ 'src/libcoro/LICENSE', 420, 438 ]
+426 silly gunzTarPerm extractEntry src/libcoro/conftest.c
+427 silly gunzTarPerm modified mode [ 'src/libcoro/conftest.c', 420, 438 ]
+428 silly gunzTarPerm extractEntry src/libcoro/coro.c
+429 silly gunzTarPerm modified mode [ 'src/libcoro/coro.c', 420, 438 ]
+430 silly gunzTarPerm extractEntry src/libcoro/coro.h
+431 silly gunzTarPerm modified mode [ 'src/libcoro/coro.h', 420, 438 ]
+432 silly gunzTarPerm extractEntry src/v8-version.h
+433 silly gunzTarPerm modified mode [ 'src/v8-version.h', 420, 438 ]
+434 silly gunzTarPerm extractEntry test/already-running.js
+435 silly gunzTarPerm modified mode [ 'test/already-running.js', 420, 438 ]
+436 silly gunzTarPerm extractEntry test/exit.js
+437 silly gunzTarPerm modified mode [ 'test/exit.js', 420, 438 ]
+438 silly gunzTarPerm extractEntry test/fibonacci.js
+439 silly gunzTarPerm modified mode [ 'test/fibonacci.js', 420, 438 ]
+440 silly gunzTarPerm extractEntry test/finish-multiple.js
+441 silly gunzTarPerm modified mode [ 'test/finish-multiple.js', 420, 438 ]
+442 silly gunzTarPerm extractEntry test/exec.js
+443 silly gunzTarPerm modified mode [ 'test/exec.js', 420, 438 ]
+444 silly gunzTarPerm extractEntry test/future.js
+445 silly gunzTarPerm modified mode [ 'test/future.js', 420, 438 ]
+446 silly gunzTarPerm extractEntry test/illegal-yield.js
+447 silly gunzTarPerm modified mode [ 'test/illegal-yield.js', 420, 438 ]
+448 silly gunzTarPerm extractEntry test/pool.js
+449 silly gunzTarPerm modified mode [ 'test/pool.js', 420, 438 ]
+450 silly gunzTarPerm extractEntry test/process-title.js
+451 silly gunzTarPerm modified mode [ 'test/process-title.js', 420, 438 ]
+452 silly gunzTarPerm extractEntry test/stack-overflow.js
+453 silly gunzTarPerm modified mode [ 'test/stack-overflow.js', 420, 438 ]
+454 silly gunzTarPerm extractEntry test/current.js
+455 silly gunzTarPerm modified mode [ 'test/current.js', 420, 438 ]
+456 silly gunzTarPerm extractEntry test/stack-overflow2.js
+457 silly gunzTarPerm modified mode [ 'test/stack-overflow2.js', 493, 511 ]
+458 silly gunzTarPerm extractEntry test/child-process.js
+459 silly gunzTarPerm modified mode [ 'test/child-process.js', 420, 438 ]
+460 silly gunzTarPerm extractEntry test/started.js
+461 silly gunzTarPerm modified mode [ 'test/started.js', 420, 438 ]
+462 silly gunzTarPerm extractEntry test/bad-context.js
+463 silly gunzTarPerm modified mode [ 'test/bad-context.js', 420, 438 ]
+464 silly gunzTarPerm extractEntry test/unwind.js
+465 silly gunzTarPerm modified mode [ 'test/unwind.js', 420, 438 ]
+466 silly gunzTarPerm extractEntry test/future-exception.js
+467 silly gunzTarPerm modified mode [ 'test/future-exception.js', 420, 438 ]
+468 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-dom-5df9268c\node_modules is being purged
+469 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-dom-5df9268c\node_modules
+470 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57\node_modules is being purged
+471 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57\node_modules
+472 silly doParallel preinstall 4
+473 silly preinstall fibers@2.0.0 C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57
+474 info lifecycle fibers@2.0.0~preinstall: fibers@2.0.0
+475 silly preinstall react@16.2.0 C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-7c998223
+476 info lifecycle react@16.2.0~preinstall: react@16.2.0
+477 silly preinstall react-dom@16.2.0 C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-dom-5df9268c
+478 info lifecycle react-dom@16.2.0~preinstall: react-dom@16.2.0
+479 silly preinstall react-tap-event-plugin@3.0.2 C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\react-tap-event-plugin-01d73851
+480 info lifecycle react-tap-event-plugin@3.0.2~preinstall: react-tap-event-plugin@3.0.2
+481 silly lifecycle fibers@2.0.0~preinstall: no script for preinstall, continuing
+482 silly lifecycle react@16.2.0~preinstall: no script for preinstall, continuing
+483 silly lifecycle react-dom@16.2.0~preinstall: no script for preinstall, continuing
+484 silly lifecycle react-tap-event-plugin@3.0.2~preinstall: no script for preinstall, continuing
+485 silly doReverseSerial remove 4
+486 silly remove C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-tap-event-plugin
+487 verbose unbuild node_modules\react-tap-event-plugin
+488 info lifecycle react-tap-event-plugin@2.0.1~preuninstall: react-tap-event-plugin@2.0.1
+489 silly lifecycle react-tap-event-plugin@2.0.1~preuninstall: no script for preuninstall, continuing
+490 info lifecycle react-tap-event-plugin@2.0.1~uninstall: react-tap-event-plugin@2.0.1
+491 silly lifecycle react-tap-event-plugin@2.0.1~uninstall: no script for uninstall, continuing
+492 verbose unbuild rmStuff react-tap-event-plugin@2.0.1 from C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules
+493 info lifecycle react-tap-event-plugin@2.0.1~postuninstall: react-tap-event-plugin@2.0.1
+494 silly lifecycle react-tap-event-plugin@2.0.1~postuninstall: no script for postuninstall, continuing
+495 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-tap-event-plugin is being purged from base C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+496 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-tap-event-plugin
+497 silly vacuum-fs purging C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-tap-event-plugin
+498 silly vacuum-fs quitting because other entries in C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules
+499 silly remove C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-dom
+500 verbose unbuild node_modules\react-dom
+501 info lifecycle react-dom@15.6.2~preuninstall: react-dom@15.6.2
+502 silly lifecycle react-dom@15.6.2~preuninstall: no script for preuninstall, continuing
+503 info lifecycle react-dom@15.6.2~uninstall: react-dom@15.6.2
+504 silly lifecycle react-dom@15.6.2~uninstall: no script for uninstall, continuing
+505 verbose unbuild rmStuff react-dom@15.6.2 from C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules
+506 info lifecycle react-dom@15.6.2~postuninstall: react-dom@15.6.2
+507 silly lifecycle react-dom@15.6.2~postuninstall: no script for postuninstall, continuing
+508 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-dom is being purged from base C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+509 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-dom
+510 silly vacuum-fs purging C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-dom
+511 silly vacuum-fs quitting because other entries in C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules
+512 silly remove C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react
+513 verbose unbuild node_modules\react
+514 info lifecycle react@15.6.2~preuninstall: react@15.6.2
+515 silly lifecycle react@15.6.2~preuninstall: no script for preuninstall, continuing
+516 info lifecycle react@15.6.2~uninstall: react@15.6.2
+517 silly lifecycle react@15.6.2~uninstall: no script for uninstall, continuing
+518 verbose unbuild rmStuff react@15.6.2 from C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules
+519 info lifecycle react@15.6.2~postuninstall: react@15.6.2
+520 silly lifecycle react@15.6.2~postuninstall: no script for postuninstall, continuing
+521 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react is being purged from base C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+522 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react
+523 silly vacuum-fs purging C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react
+524 silly vacuum-fs quitting because other entries in C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules
+525 silly remove C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\create-react-class
+526 verbose unbuild node_modules\create-react-class
+527 info lifecycle create-react-class@15.6.2~preuninstall: create-react-class@15.6.2
+528 silly lifecycle create-react-class@15.6.2~preuninstall: no script for preuninstall, continuing
+529 info lifecycle create-react-class@15.6.2~uninstall: create-react-class@15.6.2
+530 silly lifecycle create-react-class@15.6.2~uninstall: no script for uninstall, continuing
+531 verbose unbuild rmStuff create-react-class@15.6.2 from C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules
+532 info lifecycle create-react-class@15.6.2~postuninstall: create-react-class@15.6.2
+533 silly lifecycle create-react-class@15.6.2~postuninstall: no script for postuninstall, continuing
+534 silly gentlyRm C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\create-react-class is being purged from base C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+535 verbose gentlyRm don't care about contents; nuking C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\create-react-class
+536 silly vacuum-fs purging C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\create-react-class
+537 silly vacuum-fs quitting because other entries in C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules
+538 silly doSerial move 0
+539 silly doSerial finalize 4
+540 silly finalize C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\fibers
+541 silly finalize C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react
+542 silly finalize C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-dom
+543 silly finalize C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\react-tap-event-plugin
+544 silly doSerial build 4
+545 silly build fibers@2.0.0
+546 info linkStuff fibers@2.0.0
+547 silly linkStuff fibers@2.0.0 has C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules as its parent node_modules
+548 verbose linkBins fibers@2.0.0
+549 verbose linkMans fibers@2.0.0
+550 silly build react@16.2.0
+551 info linkStuff react@16.2.0
+552 silly linkStuff react@16.2.0 has C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules as its parent node_modules
+553 verbose linkBins react@16.2.0
+554 verbose linkMans react@16.2.0
+555 silly build react-dom@16.2.0
+556 info linkStuff react-dom@16.2.0
+557 silly linkStuff react-dom@16.2.0 has C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules as its parent node_modules
+558 verbose linkBins react-dom@16.2.0
+559 verbose linkMans react-dom@16.2.0
+560 silly build react-tap-event-plugin@3.0.2
+561 info linkStuff react-tap-event-plugin@3.0.2
+562 silly linkStuff react-tap-event-plugin@3.0.2 has C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules as its parent node_modules
+563 verbose linkBins react-tap-event-plugin@3.0.2
+564 verbose linkMans react-tap-event-plugin@3.0.2
+565 silly doSerial global-link 0
+566 silly doParallel update-linked 0
+567 silly doSerial install 4
+568 silly install fibers@2.0.0 C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging\fibers-e15adf57
+569 info lifecycle fibers@2.0.0~install: fibers@2.0.0
+570 verbose lifecycle fibers@2.0.0~install: unsafe-perm in lifecycle true
+571 verbose lifecycle fibers@2.0.0~install: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\fibers\node_modules\.bin;C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\Administrateur\AppData\Local\Android\sdk\platform-tools;C:\Program Files\Java\jdk1.8.0_131;C:\Program Files\Java\jre1.8.0_131\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\Administrateur\AppData\Local\Android\sdk\build-tools\25.0.2;C:\Program Files\Docker Toolbox;C:\Users\Administrateur\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Administrateur\AppData\Local\.meteor\;C:\Program Files\Oracle\VirtualBox
+572 verbose lifecycle fibers@2.0.0~install: CWD: C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\fibers
+573 silly lifecycle fibers@2.0.0~install: Args: [ '/d /s /c', 'node build.js || nodejs build.js' ]
+574 silly lifecycle fibers@2.0.0~install: Returned: code: 1  signal: null
+575 info lifecycle fibers@2.0.0~install: Failed to exec install script
+576 verbose unlock done using C:\Users\Administrateur\AppData\Roaming\npm-cache\_locks\staging-f4d09e5e2d646804.lock for C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO\node_modules\.staging
+577 silly rollbackFailedOptional Starting
+578 silly rollbackFailedOptional Finishing
+579 silly runTopLevelLifecycles Finishing
+580 silly install printInstalled
+581 warn react-addons-css-transition-group@15.6.2 requires a peer of react@^15.4.2 but none was installed.
+582 verbose If you need help, you may report this error at:
+582 verbose     <https://github.com/npm/npm/issues>
+583 warn react-komposer@2.0.0 requires a peer of react@^0.14.7 || ^15.0.0 but none was installed.
+584 verbose If you need help, you may report this error at:
+584 verbose     <https://github.com/npm/npm/issues>
+585 warn react-meteor-data@0.2.11 requires a peer of create-react-class@15.5.1 but none was installed.
+586 verbose If you need help, you may report this error at:
+586 verbose     <https://github.com/npm/npm/issues>
+587 warn react-meteor-data@0.2.11 requires a peer of react@^0.14.0 || ^15.0.0 but none was installed.
+588 verbose If you need help, you may report this error at:
+588 verbose     <https://github.com/npm/npm/issues>
+589 warn react-mounter@1.2.0 requires a peer of react@0.14.x || 15.x.x but none was installed.
+590 verbose If you need help, you may report this error at:
+590 verbose     <https://github.com/npm/npm/issues>
+591 warn react-mounter@1.2.0 requires a peer of react-dom@0.14.x || 15.x.x but none was installed.
+592 verbose If you need help, you may report this error at:
+592 verbose     <https://github.com/npm/npm/issues>
+593 warn react-stubber@1.0.0 requires a peer of react@^0.14.7 || ^15.0.0 but none was installed.
+594 verbose If you need help, you may report this error at:
+594 verbose     <https://github.com/npm/npm/issues>
+595 warn redux-form@6.8.0 requires a peer of react@^15.0.0 but none was installed.
+596 verbose If you need help, you may report this error at:
+596 verbose     <https://github.com/npm/npm/issues>
+597 warn redux-form-material-ui@4.3.1 requires a peer of react@15 but none was installed.
+598 verbose If you need help, you may report this error at:
+598 verbose     <https://github.com/npm/npm/issues>
+599 verbose stack Error: fibers@2.0.0 install: `node build.js || nodejs build.js`
+599 verbose stack Exit status 1
+599 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:255:16)
+599 verbose stack     at emitTwo (events.js:106:13)
+599 verbose stack     at EventEmitter.emit (events.js:191:7)
+599 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:40:14)
+599 verbose stack     at emitTwo (events.js:106:13)
+599 verbose stack     at ChildProcess.emit (events.js:191:7)
+599 verbose stack     at maybeClose (internal/child_process.js:885:16)
+599 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+600 verbose pkgid fibers@2.0.0
+601 verbose cwd C:\Users\Administrateur\Desktop\applications\serverapps\Nsia_Tools_suite\WIFIGO
+602 error Windows_NT 6.1.7600
+603 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+604 error node v7.2.1
+605 error npm  v3.10.10
+606 error code ELIFECYCLE
+607 error fibers@2.0.0 install: `node build.js || nodejs build.js`
+607 error Exit status 1
+608 error Failed at the fibers@2.0.0 install script 'node build.js || nodejs build.js'.
+608 error Make sure you have the latest version of node.js and npm installed.
+608 error If you do, this is most likely a problem with the fibers package,
+608 error not with npm itself.
+608 error Tell the author that this fails on your system:
+608 error     node build.js || nodejs build.js
+608 error You can get information on how to open an issue for this project with:
+608 error     npm bugs fibers
+608 error Or if that isn't available, you can get their info via:
+608 error     npm owner ls fibers
+608 error There is likely additional logging output above.
+609 verbose exit [ 1, true ]

@@ -4,7 +4,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import LinearProgress from 'material-ui/LinearProgress';
 import {connect} from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
-import {FlowRouter} from 'meteor/kadira:flow-router';
+import {FlowRouter} from 'meteor/ostrio:flow-router-extra';
 import {Field,reduxForm,formValueSelector,submit} from 'redux-form';
 import {TextField,SelectField,RadioButtonGroup} from 'redux-form-material-ui';
 import {Step,Stepper,StepLabel,StepContent} from 'material-ui/Stepper';
@@ -15,17 +15,20 @@ import DatePicker from 'material-ui/DatePicker';
 import FlatButton from 'material-ui/FlatButton';
 import {Meteor} from 'meteor/meteor';
 import areIntlLocalesSupported from 'intl-locales-supported';
-import {validateEmail,transformInFrenchDate,englishToFrenchDate} from '../../utils/utils';
+import {validateEmail,transformInFrenchDate,englishToFrenchDate,convertInTextFromFrenchDate} from '../../utils/utils';
 import ModiForm from './ModiForm';
 import NonForm from './NonForm';
 import {finprocessoui,modiformCanSubmit,modiformCantSubmit,resetProcess,getClient} from '../../redux/actions/processActions';import {$} from 'meteor/jquery';
 import { setTimeout } from 'timers';
 import _ from 'lodash';
-const MobileDetect=require('mobile-detect');
 
-let MD=new MobileDetect(window.navigator.userAgent);
+window.mobilecheck = function() {
+    var check = false;
+    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+    return check;
+  };
+
 //import {decoupagedone,releverOk} from '../../redux/actions/relever-actions';
-
 let DateTimeFormat;
 if(areIntlLocalesSupported(['fr'])){
     DateTimeFormat=global.Intl.DateTimeFormat;
@@ -81,9 +84,11 @@ let max500style=_.extend({},normalStyle,{
             errorMsg:'',
             styles:normalStyle,
             IsTable:false,
+            choixOuimodMobile:false,
             showLoader:false,
             showTable:false,
             error:false,
+            disableThem:false,
             checking:false,//server side check flag for showing loaders
             stepperFinished:false,
             stepIndex:0,
@@ -101,6 +106,7 @@ let max500style=_.extend({},normalStyle,{
                     modnom:false,
                     moddatenaissance:false,
                     modlieu:false,
+                    modprof:false,
                     modsexe:false,
                     modmatrimo:false,
                     modtel:false,
@@ -132,7 +138,7 @@ let max500style=_.extend({},normalStyle,{
     }*/
     
     handleNext=(r)=>{
-        console.log(r);
+        //console.log(r);
         const {stepIndex,stepData}=this.state;
         if(stepData.currentRoute==="numpolice"){
             if(typeof stepData.clientData!=="object"){
@@ -168,13 +174,15 @@ let max500style=_.extend({},normalStyle,{
         if(stepIndex>0){
             this.props.reset();
             this.setState({
+                disableThem:false,
                 stepIndex: stepIndex-1,
             });
         }
         if(stepIndex===1){
             this.props.reset();
-            console.log("ca doit passer normalement");
+           // console.log("ca doit passer normalement");
             this.setState({
+                disableThem:false,
                 stepData:Object.assign({},this.state.stepData,{
                     step1_isClient:null,
                     modifs:Object.assign({},this.state.stepData.modifs,{
@@ -191,6 +199,7 @@ let max500style=_.extend({},normalStyle,{
         if(stepData.currentRoute=="numpolice"){
             this.props.reset();
             this.setState({
+                disableThem:false,
                 stepData:Object.assign({},this.state.stepData,{
                     numpolice:'',
                     dateNaissance:null,
@@ -211,6 +220,7 @@ let max500style=_.extend({},normalStyle,{
             this.props.reset();
             this.props.dispatch(modiformCantSubmit())
             this.setState({
+                disableThem:false,
                 stepData:Object.assign({},this.state.stepData,{
                     numpolice:'',
                     dateNaissance:null,
@@ -233,8 +243,7 @@ let max500style=_.extend({},normalStyle,{
     };
 
     componentDidMount(){
-        if(!this.state.stepData.dateNaissance)
-        $('[name^=birthDateForChecking]').val("");
+        
         this._updateDimensions();
         window.addEventListener('resize',this._updateDimensions.bind(this))
         
@@ -308,7 +317,7 @@ let max500style=_.extend({},normalStyle,{
                 }
                 
             }
-            console.log("in here");
+           // console.log("in here");
             if(isNaN(Number(this.state.stepData.numpolice))){
                 this.setState({
                     error:true,
@@ -334,7 +343,7 @@ let max500style=_.extend({},normalStyle,{
                 return ; 
             }
             else if(this.state.stepData.dateNaissance==="" || !this.state.stepData.dateNaissance){
-                console.log("in date check");
+                //console.log("in date check");
                 this.setState({
                     error:true,
                     stepData:Object.assign({},this.state.stepData,{
@@ -349,9 +358,9 @@ let max500style=_.extend({},normalStyle,{
                 //On fait un meteor.call pour récupérer les infos du client de notre base de prod
                 //et on les affiche au client
                 !this.state.checking?this.setState({checking:true}):null;
-                Meteor.call("getClientInfos",this.state.stepData.numpolice,parseInt(moment(this.state.stepData.dateNaissance).format("YYYYMMDD"),10),(err,res)=>{
+                Meteor.call("getClientInfos",this.state.stepData.numpolice,parseInt(moment(convertInTextFromFrenchDate(this.state.stepData.dateNaissance)).format("YYYYMMDD"),10),(err,res)=>{
                     if(res && typeof res[0] !="undefined"){
-                        console.log("in meteor call route numpolice for OUI res="+res);
+                        //console.log("in meteor call route numpolice for OUI res="+res);
                         if(typeof res=="string"){//le server renvoie C quand il y a une erreur ou qu4il ne retrouve pas les donnees ceci est a ameliorer
                             this.setState({
                                 error:true,
@@ -367,11 +376,12 @@ let max500style=_.extend({},normalStyle,{
                             this._dialogOpen();
                             return;
                         }else{
-                            console.log("la route est alors "+route);
+                            //console.log("la route est alors "+route);
                             
                             this.setState({
                                 error:false,
                                 checking:false,
+                                disableThem:true,
                                 stepData:Object.assign({},this.state.stepData,{
                                     clientData:res[0],
                                     currentRoute:route,
@@ -400,13 +410,13 @@ let max500style=_.extend({},normalStyle,{
                             );
                         }   
                     }else if(err){
-                        console.log(err);
+                        //console.log(err);
                     }
                 });
                 
             }
         }else if(route==="prospectForm" ||route==="modiform"){
-            console.log("la route du "+route)
+           // console.log("la route du "+route)
             return(
                 <div className="loadmoreDiv">
                     {
@@ -454,15 +464,39 @@ let max500style=_.extend({},normalStyle,{
     }
     handlePolice=(e)=>{
         e.stopPropagation();
-        console.log(e.target.value);
+        //console.log(e.target.value);
+        if(typeof this.state.stepData.numpolice!="undefined" && (this.state.stepData.numpolice.length<8 || this.state.stepData.numpolice.length>8)&&this.state.stepData.clientData){
+            this.setState({
+                error:false,
+                stepData:Object.assign({},this.state.stepData,{
+                    numpolice:e.target.value,
+                    clientData:null
+                }),
+                lastIndex:5
+            });
+        }
+        else{
+            this.setState({
+                error:false,
+                stepData:Object.assign({},this.state.stepData,{
+                    numpolice:e.target.value
+                }),
+                lastIndex:5
+            });
+        }
+    
+    };
+    handleDate=(e)=>{
+        e.stopPropagation();
+       // console.log(e.target.value);
+            this.setState({
+                error:false,
+                stepData:Object.assign({},this.state.stepData,{
+                    dateNaissance:e.target.value.length==10?e.target.value:null,
+                }),
+            });
+      
         
-        this.setState({
-            error:false,
-            stepData:Object.assign({},this.state.stepData,{
-                numpolice:e.target.value
-            }),
-            lastIndex:5
-        });
     
     };
    _dialogOpen(){
@@ -470,7 +504,9 @@ let max500style=_.extend({},normalStyle,{
    }
    _dialogClose(){
     this.props.reset();
-       this.setState({dialogIsOpen: false});
+       this.setState({dialogIsOpen: false,stepData:Object.assign({},this.state.stepData,{
+        dateNaissance:null,
+    }),});
    }
   
     _dialogTOpen(){
@@ -491,12 +527,13 @@ let max500style=_.extend({},normalStyle,{
     }
     _dialogTCloseConf(){
         //on check pour voir effectivement aue l'on a pas des valeurs non communiquees
+        //alert();
         const {clientData}=this.state.stepData;
         const {dispatch}=this.props;
         let found=false;
         Object.keys(clientData).forEach((e,i,arr)=>{
             //console.log(clientData[e]);
-            if(clientData[e]=="(non communiquée)"||clientData[e]=="{non communiquée}"){
+            if(clientData[e]=="(non communiquée)"||clientData[e]=="{non communiquée}"||clientData[e]==""){
                 let nomDuChamps="";
                 found=true;
                 switch(e){
@@ -508,6 +545,9 @@ let max500style=_.extend({},normalStyle,{
                     break;
                     case"sexe_assure":
                     nomDuChamps="sexe(M ou F)"
+                    break;
+                    case"profession":
+                    nomDuChamps="profession"
                     break;
                     case"situation_matrimoniale":
                     nomDuChamps="situation matrimoniale"
@@ -523,7 +563,7 @@ let max500style=_.extend({},normalStyle,{
                     break;
                 }
                 let c=confirm("Nous constatons que votre "+nomDuChamps+" n'est pas renseigné.Voulez vous quand même continuez ?");
-               console.log("value of c "+c);
+              // console.log("value of c "+c);
                 if(c===true){
                     
                     this.setState({
@@ -534,14 +574,22 @@ let max500style=_.extend({},normalStyle,{
                         }),
                         stepIndex:this.state.stepIndex+1
                     });
-                    dispatch(finprocessoui());
+                    Meteor.call("saveLog",clientData,"clients",(err,res)=>{
+                        if(err){
+                       
+                        }else{
+                            //alert("dispatching meteor call")
+                        //dispatch action afin de rediriger pour 20min
+                           store.dispatch(finprocessoui());
+                        }
+                    });
+                   // dispatch(finprocessoui());
                 }else{
                     return;
                 }
             }
         });
-        /**
-         * else{
+        if(!found){
                
                 this.setState({
                     dialogTIsOpen: false,
@@ -554,7 +602,7 @@ let max500style=_.extend({},normalStyle,{
                 dispatch(finprocessoui());
                 //alert("stepIndex "+this.state.stepIndex);
             }
-         */
+         
     }
     _dialogTCloseMod(){
         let truelength=0;
@@ -602,23 +650,28 @@ let max500style=_.extend({},normalStyle,{
    }
   componentDidUpdate(){
       const{dispatch,reduxState}=this.props;
-      if(MD.mobile() && this.stepData.step1_isClient=="non" && this.state.stepIndex===3){
+      if(window.mobilecheck() && this.state.stepData.step1_isClient=="non" && this.state.stepIndex===3){
         //prevention pour gerer les vilain bugs sur le mobile
-        console.log("non choix"+MD.mobile())
+      // console.log("non choix"+window.mobilecheck())
         this.setState({
             stepIndex:this.state.stepIndex-1
         })
     }
-    if(MD.mobile() && this.state.stepData.step1_isClient=="oui" && this.state.stepIndex===4){
-        //prevention pour gerer les vilain bugs sur le mobile
-        console.log("oui choix"+MD.mobile())
+    if(window.mobilecheck() && this.state.stepData.step1_isClient=="oui" && this.state.stepIndex===3 && !this.state.choixOuimodMobile){
+        //prevention pour gerer les vilain bugs sur le mobile hacky solution via state
+       //alert("oui choix"+window.mobilecheck())
         this.setState({
-            stepIndex:this.state.stepIndex-1
+            stepIndex:this.state.stepIndex-1,
+            choixOuimodMobile:true
         })
+    }if(window.mobilecheck() && this.state.stepData.step1_isClient=="oui" && this.state.stepIndex===3 && this.state.choixOuimodMobile){
+        //prevention pour gerer les vilain bugs sur le mobile hacky solution via state
+      // alert("oui 2choix"+window.mobilecheck())
+        
     }
       console.dir(reduxState.flowProcess.canBrowse+"..."+reduxState.flowProcess.processCompleted);
       if(reduxState.flowProcess.canBrowse && reduxState.flowProcess.processCompleted==="OUI"){
-        console.log("redirection Client")
+        //console.log("redirection Client")
         if(this.state.stepData.choixModification=="MOD"){
             this.setState({
                 stepIndex:this.state.stepIndex+1
@@ -629,13 +682,38 @@ let max500style=_.extend({},normalStyle,{
             })  
         }
         dispatch(resetProcess());
+        if(this.props.routerParam){
+            //console.dir(this.props.routerParam);
+            const {routerParam}=this.props;
+            console.log(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`);
 
+            setTimeout(()=>{
+                window.location.assign(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`)
+                
+                console.log(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`);
+                //window.location.assign(`${routerParam.link_login_only}?dst=http://www.google.com&amp;username=T-${routerParam.mac_esc}`)
+            },10000);
+        }
+        
       }else if(reduxState.flowProcess.canBrowse && reduxState.flowProcess.processCompleted==="NON"){
-        console.log("redirection Prospects");
+       // console.log("redirection Prospects");
+       //alert(JSON.stringify(this.props.routerParam));
         this.setState({
             stepIndex:this.state.stepIndex+1
         });
         dispatch(resetProcess());
+        if(this.props.routerParam){
+            //console.dir(this.props.routerParam);
+            const {routerParam}=this.props;
+            console.log(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`);
+
+            setTimeout(()=>{
+                window.location.assign(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`)
+                
+                console.log(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`);
+                //window.location.assign(`${routerParam.link_login_only}?dst=http://www.google.com&amp;username=T-${routerParam.mac_esc}`)
+            },10000);
+        }
       }
   }
     render(){
@@ -689,6 +767,7 @@ let max500style=_.extend({},normalStyle,{
                                     <p><b>Né(e) le: </b> {typeof this.state.stepData.clientData =="object" && this.state.stepData.clientData ?transformInFrenchDate(this.state.stepData.clientData.date_naissance.toString()):null}</p>
                                     <p><b>&Agrave;: </b> {typeof this.state.stepData.clientData =="object" && this.state.stepData.clientData ?this.state.stepData.clientData.lieu_naissance:null}</p>
                                     <p><b>De sexe: </b> {typeof this.state.stepData.clientData =="object" && this.state.stepData.clientData ?this.state.stepData.clientData.sexe_assure:null}</p>
+                                    <p><b>De profession: </b> {typeof this.state.stepData.clientData =="object" && this.state.stepData.clientData ?this.state.stepData.clientData.profession:null}</p>
                                     <p><b>Situation matrimoniale: </b> {typeof this.state.stepData.clientData =="object" && this.state.stepData.clientData ?this.state.stepData.clientData.situation_matrimoniale:null}</p>
                                     <p><b>Contacts téléphoniques: </b> {typeof this.state.stepData.clientData =="object" &&  this.state.stepData.clientData ?this.state.stepData.clientData.contact:null}</p>
                                     <p><b>Email: </b> {typeof this.state.stepData.clientData =="object" &&  this.state.stepData.clientData ?this.state.stepData.clientData.email:null}</p>
@@ -716,13 +795,13 @@ let max500style=_.extend({},normalStyle,{
                                                 }}
                                             />
                                             <Checkbox
-                                                label="Sexe"
-                                                checked={typeof this.state.stepData.modifs!="undefined"?this.state.stepData.modifs.modsexe:false}
+                                                label="Profession"
+                                                checked={typeof this.state.stepData.modifs!="undefined"?this.state.stepData.modifs.modprof:false}
                                                 onCheck={()=>{
                                                     this.setState({
                                                         stepData:Object.assign({},this.state.stepData,{
                                                             modifs:Object.assign({},this.state.stepData.modifs,{
-                                                                modsexe:typeof this.state.stepData.modifs!="undefined"?!this.state.stepData.modifs.modsexe:true,
+                                                                modprof:typeof this.state.stepData.modifs!="undefined"?!this.state.stepData.modifs.modprof:true,
                                                             } )       
                                                         })
                                                     });
@@ -791,7 +870,7 @@ let max500style=_.extend({},normalStyle,{
                                     </div>
                                     
                                 </div>
-                                <p>Nous vous invitons à vérifier vos informations personelles. N'hésitez surtout pas à faire une mise à jour de celles ci si vous pensez que certaines informations ne réfletent pas la réalité.<br/>Cliquez sur le bouton <b>Tout est conforme</b> si vous n'avez pas besoin de mettre vos données à jour.<br/>Cliquez sur le bouton <b>Retour</b> pour modifier les données précédemment entrées.<br/>Cliquez sur le bouton <b>Mettre à jour</b> pour mettre à jour vos infos.</p>
+                                <p>Nous vous invitons à vérifier vos informations personelles. N'hésitez surtout pas à faire une mise à jour de celles-ci si vous pensez que certaines informations ne réfletent pas la réalité.<br/>Cliquez sur le bouton <b>Tout est conforme</b> si vous n'avez pas besoin de mettre vos données à jour.<br/>Cliquez sur le bouton <b>Retour</b> pour modifier les données précédemment entrées.<br/>Cliquez sur le bouton <b>Mettre à jour</b> pour mettre à jour vos informations.</p>
                             </div>
             
                             ); 
@@ -801,44 +880,29 @@ let max500style=_.extend({},normalStyle,{
             <StepContent>
                 <h1>Identifiez vous ci dessous</h1>
                 <div>
-                <TextField
-                    floatingLabelText="Veuillez entrer un numero de police"
-                    hintText="Exemple:12345678"
-                    fullWidth={true}
-                    autocomplete="off"
-                    floatingLabelStyle={this.state.styles.floatingLabelStyle}
-                    hintStyle={this.state.styles.hintStyle}
-                    onChange={this.handlePolice}
-                    value={this.state.stepData.numpolice}
-                />
-                <DatePicker
-                    name="birthDateForChecking" 
-                    DateTimeFormat={DateTimeFormat}
-                    openToYearSelection={true}
-                    className="datepicker"
-                    style={{flexGrow:'1'}}
-                    hintText="Entrez votre date de naissance"
-                    floatingLabelText="Votre date de naissancer"
-                    fullWidth={true}
-                    ref={(birthDateForChecking) => { this.birthDateForChecking = birthDateForChecking; }}
-                    okLabel="OK"
-                    cancelLabel="Annuler"
-                    locale="fr"
-                    onChange={(event, date) => {
-                        this.setState({
-                            error:false,
-                            stepData:Object.assign({},this.state.stepData,{
-                                dateNaissance:date
-                            })
-                        });
-                      }}
-                    format={(value)=>{
-                        return value===''?null:value;
-                    }}
-                    floatingLabelStyle={this.state.styles.floatingLabelStyle}
-                    hintStyle={this.state.styles.hintStyle}
-                    floatingLabelFixed={true}
-                />
+                    <form name="Ouiidentif">
+                        <TextField
+                            floatingLabelText="Veuillez entrer un numero de police"
+                            hintText="Exemple:12345678"
+                            fullWidth={true}
+                            autoComplete="off"
+                            floatingLabelStyle={this.state.styles.floatingLabelStyle}
+                            hintStyle={this.state.styles.hintStyle}
+                            onChange={this.handlePolice}
+                            disabled={this.state.disableThem}
+                            value={this.state.stepData.numpolice}
+                        />
+                        <TextField
+                            floatingLabelText="Veuillez entrer votre date de naissance"
+                            hintText="Exemple:JJ-MM-AAAA"
+                            fullWidth={true}
+                            autoComplete="off"
+                            disabled={this.state.disableThem}
+                            floatingLabelStyle={this.state.styles.floatingLabelStyle}
+                            hintStyle={this.state.styles.hintStyle}
+                            onChange={this.handleDate}
+                        />
+               </form>
                 </div>
                 {this.state.checking?<center><CircularProgress /></center>:null}
                 {typeof this.state.stepData.numpolice != "undefined" && this.state.stepData.numpolice.length>=8 && this.state.stepData.dateNaissance ?this.renderStepActions(1,"numpolice"):this.renderStepRetourOnly(1)}

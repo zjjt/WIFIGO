@@ -1,5 +1,5 @@
 import React,{PropTypes,Component} from 'react';
-import {FlowRouter} from 'meteor/kadira:flow-router';
+import {FlowRouter} from 'meteor/ostrio:flow-router-extra';
 import {Toolbar,ToolbarSeparator,ToolbarTitle,ToolbarGroup} from 'material-ui/Toolbar';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
@@ -18,7 +18,7 @@ import {submitNon} from './submits';
 import {finprocessnon} from '../../redux/actions/processActions';
 import {Random} from 'meteor/random';
 import _ from 'lodash';
-import {validateEmail} from '../../utils/utils';
+import {validateEmail,isValidDate} from '../../utils/utils';
 
 let DateTimeFormat;
 if(areIntlLocalesSupported(['fr'])){
@@ -84,18 +84,20 @@ if(areIntlLocalesSupported(['fr'])){
         const maxLength3=maxLength(3);
         const maxLength8=maxLength(8);
         const minforage2=minforage(2);
+        const isGoodDate=value=>!isValidDate(value.substring(6),value.substring(3,5),value.substring(0,2))?"Veuillez entrer une date selon le format jj-MM-AAAA":undefined;
         const required = value => value ? undefined : 'Requis';
         const number = value => value && isNaN(Number(value)) ?"Ce champs n'accepte que des nombres":undefined;
         const email = value => value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ?'Adresse e-mail invalide' : undefined
        
         return(
-               <form onSubmit={handleSubmit} autocomplete="off" >
+               <form onSubmit={handleSubmit} autoComplete="off" >
                <Field
                     name="nom" 
                     component={TextField}
                     hintText="Entrez votre nom de famille"
                     floatingLabelText="Nom de famille"
                     fullWidth={true}
+                    autoComplete="off"
                     floatingLabelStyle={styles.floatingLabelStyle}
                     hintStyle={styles.hintStyle}
                     floatingLabelFixed={true}
@@ -109,19 +111,20 @@ if(areIntlLocalesSupported(['fr'])){
                     fullWidth={true}
                     floatingLabelStyle={styles.floatingLabelStyle}
                     hintStyle={styles.hintStyle}
+                    autoComplete="off"
                     floatingLabelFixed={true}
                     validate={[ required ]}
                 />
                 <Field
-                    name="age" 
+                    name="datenaissance"
                     component={TextField}
-                    hintText="Entrez votre age"
-                    floatingLabelText="age"
+                    floatingLabelText="date de naissance"
+                    hintText="Exemple:JJ-MM-AAAA"
                     fullWidth={true}
+                    autoComplete="off"
                     floatingLabelStyle={styles.floatingLabelStyle}
                     hintStyle={styles.hintStyle}
-                    floatingLabelFixed={true}
-                    validate={[ required,minforage2,maxminage,number]}
+                    validate={[ required,isGoodDate]}
                 />
                 <Field
                     name="telephone" 
@@ -129,6 +132,7 @@ if(areIntlLocalesSupported(['fr'])){
                     hintText="Entrez votre numéro de téléphone"
                     floatingLabelText="Contact"
                     fullWidth={true}
+                    autoComplete="off"
                     floatingLabelStyle={styles.floatingLabelStyle}
                     hintStyle={styles.hintStyle}
                     floatingLabelFixed={true}
@@ -140,6 +144,7 @@ if(areIntlLocalesSupported(['fr'])){
                     hintText="Entrer votre email"
                     floatingLabelText="Email"
                     fullWidth={true}
+                    autoComplete="off"
                     floatingLabelStyle={styles.floatingLabelStyle}
                     hintStyle={styles.hintStyle}
                     type="mail"

@@ -4,7 +4,8 @@ const initialState={
     client:null,
     processCompleted:"",
     canBrowse:false,
-    modiformCanSubmit:false
+    modiformCanSubmit:false,
+    urlParams:null
 };
 
 export default function processReducer(state=initialState,action){
@@ -45,6 +46,11 @@ export default function processReducer(state=initialState,action){
             return{
                 ...state,
                 client:action.client
+            }
+        case actions.QUERYPARAMS:
+            return{
+                ...state,
+                urlParams:action.urlParams
             }
         default:
             return state;

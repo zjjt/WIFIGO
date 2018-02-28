@@ -3,8 +3,15 @@ export const FINDUPROCESSN='FINDUPROCESSN';//non
 export const FINDUPROCESSO='FINDUPROCESSO';//oui
 export const SUBMITALLOWED='SUBMITALLOWED';//oui
 export const SUBMITNOTALLOWED='SUBMITNOTALLOWED';//oui
+export const QUERYPARAMS='QUERYPARAMS';
 export const CLIENTINFO='CLIENTINFO';
 
+export function getParams(c){
+	return{
+		type:QUERYPARAMS,
+		urlParams:c
+	}
+}
 export function getClient(c){
 	return{
 		type:CLIENTINFO,
