@@ -27,7 +27,7 @@ stolinski:stylus-multi
 mdg:validated-method
 simple:rest
 check
-meteortoys:allthings        # Ne pas oublier de commenter ce package lors de la mise en production
+#meteortoys:allthings        # Ne pas oublier de commenter ce package lors de la mise en production
 simple:rest-method-mixin
 ostrio:flow-router-extra
 tomwasd:history-polyfill

@@ -1,7 +1,7 @@
 app:
   image: wifigo
   ports:
-    - "87:3000"
+    - "87:80"
     
   links:
     - mongo
@@ -13,7 +13,7 @@ app:
         "DBSQLSERVER_PORT":"57055", 
         "DBSQLSERVER_USER":"reportvie",
         "DBSQLSERVER_PASSWORD":"reportvie",
-        "DBSQLSERVER_DATABASE":"SUNDB_RCI",
+        "DBSQLSERVER_DATABASE":"SUN_COTEDIVOIRE",
         "DBSQLSERVER_BCIVIE_HOST":"10.10.3.40",
         "DBSQLSERVER_BCIVIE_PORT":"56778",
         "DBSQLSERVER_BCIVIE_USER":"sa",
