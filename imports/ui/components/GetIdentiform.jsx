@@ -721,9 +721,13 @@ let max500style=_.extend({},normalStyle,{
          const {stepIndex,lastIndex,stepperFinished}=this.state;
          if(this.state.stepData.choixModification==="CONF"){
             
-            /*setTimeout(()=>{
-                location.href="https://www.google.com";
-            },5000);*/
+            setTimeout(()=>{
+                //location.href="https://www.google.com";
+                window.open(
+                    'https://www.google.com',
+                    '_blank' // <- This is what makes it open in a new window.
+                  );
+            },10000);
         }else if(this.state.stepData.choixModification==="MOD"){
             
         }

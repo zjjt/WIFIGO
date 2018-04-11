@@ -70,10 +70,10 @@ const submitYes=(values)=>{
             throw new SubmissionError({sexe:"ce type de sexe n'existe pas",_error:"Echec de la soumission"});
             return;
         }*/
-       if(typeof values.email!="undefined" && !validateEmail(values.email)){
+       /*if((typeof values.email!="undefined" || typeof values.email!="string") && !validateEmail(values.email)){
             throw new SubmissionError({email:"Veuillez fournir un email valide.",_error:"Echec de la soumission"});    
             return;
-        }
+       }*/
         /* 
         if(typeof values.matrimoniale!="undefined" && (values.matrimoniale!="C"||values.matrimoniale!="M"||values.matrimoniale!="P"||values.matrimoniale!="V")){
             throw new SubmissionError({matrimoniale:"Toi tu es un alien n'est-ce pas",_error:"Echec de la soumission"});
