@@ -580,7 +580,7 @@ let max500style=_.extend({},normalStyle,{
                         }else{
                             //alert("dispatching meteor call")
                         //dispatch action afin de rediriger pour 20min
-                           store.dispatch(finprocessoui());
+                            dispatch(finprocessoui());
                         }
                     });
                    // dispatch(finprocessoui());
@@ -692,7 +692,7 @@ let max500style=_.extend({},normalStyle,{
                 
                 console.log(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`);
                 //window.location.assign(`${routerParam.link_login_only}?dst=http://www.google.com&amp;username=T-${routerParam.mac_esc}`)
-            },10000);
+            },7000);
         }
         
       }else if(reduxState.flowProcess.canBrowse && reduxState.flowProcess.processCompleted==="NON"){
@@ -712,7 +712,7 @@ let max500style=_.extend({},normalStyle,{
                 
                 console.log(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`);
                 //window.location.assign(`${routerParam.link_login_only}?dst=http://www.google.com&amp;username=T-${routerParam.mac_esc}`)
-            },10000);
+            },7000);
         }
       }
   }
@@ -722,12 +722,12 @@ let max500style=_.extend({},normalStyle,{
          if(this.state.stepData.choixModification==="CONF"){
             
             setTimeout(()=>{
-                //location.href="https://www.google.com";
-                window.open(
+                location.href="https://www.google.com";
+               /* window.open(
                     'https://www.google.com',
                     '_blank' // <- This is what makes it open in a new window.
-                  );
-            },10000);
+                );*/
+            },7000);
         }else if(this.state.stepData.choixModification==="MOD"){
             
         }
