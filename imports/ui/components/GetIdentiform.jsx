@@ -677,19 +677,22 @@ let max500style=_.extend({},normalStyle,{
                 stepIndex:this.state.stepIndex+1
             })
         }else{
+           // alert("here "+this.state.stepIndex);
             this.setState({
-                stepIndex:this.state.stepIndex-1+1
+                stepIndex:this.state.stepIndex
             })  
         }
         dispatch(resetProcess());
+        //alert(JSON.stringify(this.props));
         if(this.props.routerParam){
-            //console.dir(this.props.routerParam);
+            //alert(this.props.routerParam);
+            
             const {routerParam}=this.props;
             console.log(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`);
 
             setTimeout(()=>{
                 window.location.assign(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`)
-                
+                //alert('redirecting');
                 console.log(`${routerParam.link_login_only}?username=T-${routerParam.mac_esc}`);
                 //window.location.assign(`${routerParam.link_login_only}?dst=http://www.google.com&amp;username=T-${routerParam.mac_esc}`)
             },7000);
@@ -721,13 +724,13 @@ let max500style=_.extend({},normalStyle,{
          const {stepIndex,lastIndex,stepperFinished}=this.state;
          if(this.state.stepData.choixModification==="CONF"){
             
-            setTimeout(()=>{
-                location.href="https://www.google.com";
+           // setTimeout(()=>{
+             //   location.href="https://www.google.com";
                /* window.open(
                     'https://www.google.com',
                     '_blank' // <- This is what makes it open in a new window.
                 );*/
-            },7000);
+            //},7000);
         }else if(this.state.stepData.choixModification==="MOD"){
             
         }
